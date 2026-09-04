@@ -4,9 +4,8 @@ The zero-dependency evaluation engine for CoDuck Flags. It validates versioned r
 evaluates typed flags, matches ordered targeting rules and produces stable percentage
 assignments without network access.
 
-```bash
-pnpm add @coduck/flags-core
-```
+See the root [installation status](https://github.com/CoDuckAI/flags#install) during the initial
+release. After npm publication: `npm install @coduck/flags-core`.
 
 ```ts
 import { defineRuleset, evaluateBoolean } from "@coduck/flags-core";

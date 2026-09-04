@@ -7,7 +7,7 @@
   "type": "module",
   "packageManager": "pnpm@11.19.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=20.19.0"
   },
   "scripts": {
     "build": "pnpm -r --if-present build",
@@ -15,18 +15,26 @@
     "proof": "pnpm build && node proof/flags-sdk/protocol.mjs",
     "proof:browser": "pnpm build && node proof/flags-sdk/orchestrate.mjs",
     "package:smoke": "pnpm build && node scripts/package-smoke.mjs",
-    "format": "prettier --write package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md",
-    "format:check": "prettier --check package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md",
+    "docs:check": "node scripts/verify-docs.mjs",
+    "example:local": "pnpm build && node examples/quickstart.mjs",
+    "example:live": "pnpm build && node examples/live-rollout.mjs",
+    "release:pack": "pnpm build && node scripts/release-pack.mjs",
+    "release:test": "node --test scripts/release-policy.test.mjs",
+    "format": "prettier --write package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' 'examples/**/*.mjs' 'docs/**/*.md' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md RELEASING.md",
+    "format:check": "prettier --check package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' 'examples/**/*.mjs' 'docs/**/*.md' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md RELEASING.md",
     "typecheck": "pnpm build && pnpm -r --if-present typecheck && tsc --noEmit -p tsconfig.test.json",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "check": "pnpm format:check && pnpm typecheck && pnpm test:coverage && pnpm build && pnpm publint && pnpm package:smoke",
+    "check": "pnpm format:check && pnpm typecheck && pnpm test:coverage && pnpm build && pnpm publint && pnpm package:smoke && pnpm docs:check && pnpm release:test",
     "publint": "pnpm -r --if-present publint"
   },
   "devDependencies": {
+    "@coduck/flags": "workspace:*",
+    "@coduck/flags-management": "workspace:*",
+    "@coduck/flags-server": "workspace:*",
     "@openfeature/server-sdk": "^1.23.0",
-    "@types/node": "^26.4.1",
+    "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "^5.0.0",
     "ajv": "^8.20.0",
     "fast-check": "^4.9.0",

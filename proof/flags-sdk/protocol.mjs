@@ -7,7 +7,7 @@ import { createClient, httpSource } from "../../packages/sdk/dist/index.js";
 import { createFlagServer, MemoryRulesetStore } from "../../packages/server/dist/index.js";
 import { booleanFlag, createManagementClient } from "../../packages/management/dist/index.js";
 
-const directory = dirname(fileURLToPath(import.meta.url));
+const directory = process.env.FLAGS_PROOF_OUTPUT ?? dirname(fileURLToPath(import.meta.url));
 const results = [];
 const readKey = "proof-read-key-123456789";
 const adminKey = "proof-admin-key-12345678";

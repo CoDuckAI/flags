@@ -1,33 +1,79 @@
 # CoDuck Flags
 
-**Deploy once. Release gradually. Roll back instantly.**
+**Deploy the code. Decide who gets it.**
 
-CoDuck Flags is a headless, TypeScript-first feature rollout SDK. The application evaluates
-flags synchronously from an immutable in-memory snapshot; configuration refresh happens in
-the background. Use a local JSON ruleset, embed the reference server, or provide your own
-source and storage adapters. No dashboard or hosted CoDuck account is required.
+[![CI](https://github.com/CoDuckAI/flags/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CoDuckAI/flags/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-first-3178c6.svg)](packages/sdk)
 
-> [!IMPORTANT]
-> Feature flags are not authorization. Continue enforcing permissions, plan entitlements,
-> and access control independently on the server.
+A headless feature-flag and rollout SDK for Node.js applications. Evaluate flags locally,
+target accounts or attributes, grow a stable percentage cohort, and turn a feature off
+without another deployment. Your application owns the UI. Your infrastructure owns the data.
 
-## What ships
+No hosted account. No dashboard dependency. No product CLI. No network request when you
+evaluate a flag.
 
-| Package                      | Purpose                                                                         |
-| ---------------------------- | ------------------------------------------------------------------------------- |
-| `@coduck/flags`              | Runtime SDK, local evaluation, file/HTTP sources and last-good cache            |
-| `@coduck/flags-core`         | Zero-dependency ruleset validator, targeting engine and deterministic bucketing |
-| `@coduck/flags-management`   | UI-independent management SDK with optimistic concurrency                       |
-| `@coduck/flags-server`       | Optional embeddable HTTP/SSE reference server and file/memory stores            |
-| `@coduck/flags-openfeature`  | OpenFeature server provider                                                     |
-| `@coduck/flags-test-vectors` | Cross-language hashing and bucketing compatibility values                       |
+[Quickstart](#quickstart) · [Live rollouts](#change-a-rollout-without-redeploying) ·
+[Targeting](docs/targeting.md) · [Production guide](docs/production.md) ·
+[Proof](proof/flags-sdk/REPORT.md) · [Releases](https://github.com/CoDuckAI/flags/releases)
 
-The server is a thin transport/storage adapter around the SDK contract. A UI, automation,
-or internal admin tool can use the management SDK without requiring a CoDuck-provided UI.
+> **Release status:** `0.1.0` is the initial SDK release line. npm publication is pending;
+> the package names below are not yet installable from the public npm registry.
+> Build and install the verified tarballs using the instructions below.
 
-## Local quickstart
+## Why Flags?
 
-```ts
+- **Local decisions.** Synchronous evaluation from a validated, immutable snapshot.
+- **Predictable targeting.** Exact account overrides, attributes, reusable segments, and ordered rules.
+- **Stable ramps.** Keep the same accounts selected as a two-variant rollout grows.
+- **Live configuration.** HTTP/SSE updates, polling recovery, watched files, or your own source adapter.
+- **Explicit failure behavior.** Last-known-good configuration, caller defaults, and observable stale state.
+- **SDK all the way down.** The management API can power your own admin UI, application route, or automation.
+- **Portable integration.** TypeScript declarations, ESM and CommonJS, an optional OpenFeature provider, and an MIT license.
+
+Use it when you want release controls inside your own application. It is not an experiment
+analytics platform, an authorization system, or a managed multi-region control plane.
+
+## Install
+
+Node.js **20.19+** is required for the runtime and server packages. Use a supported Node.js
+release for production. Package names shown here are not a claim of registry availability.
+
+Until npm publication, build from this repository:
+
+```sh
+git clone --branch feat/oss-sdk-v1 https://github.com/CoDuckAI/flags.git
+cd flags
+pnpm install --frozen-lockfile
+pnpm release:pack
+```
+
+The implementation currently lives on `feat/oss-sdk-v1` ([PR #1](https://github.com/CoDuckAI/flags/pull/1));
+the default branch has not yet received the SDK. Repository access is required while it remains private.
+
+`release:pack` builds six packages, checks their contents and licenses, installs the real
+tarballs in a clean consumer project, executes both examples, and checks TypeScript imports.
+The resulting archives and checksums are in `release/0.1.0/`.
+
+From your application's directory, install the core and runtime together:
+
+```sh
+npm install /path/to/flags/release/0.1.0/coduck-flags-core-0.1.0.tgz \
+  /path/to/flags/release/0.1.0/coduck-flags-0.1.0.tgz
+```
+
+After public npm publication, the equivalent command will be `npm install @coduck/flags`.
+The Git repository is a monorepo, not a directly installable npm package; install its package
+tarballs rather than passing the Git URL to `npm install`.
+
+## Quickstart
+
+This complete example enables a checkout for Pro accounts and leaves everyone else on the
+current experience. Save it as `quickstart.mjs` and run `node quickstart.mjs`.
+
+<!-- example: examples/quickstart.mjs -->
+
+```js
 import { createClient, defineRuleset, staticSource } from "@coduck/flags";
 
 const ruleset = defineRuleset({
@@ -37,7 +83,7 @@ const ruleset = defineRuleset({
   updatedAt: new Date().toISOString(),
   segments: {},
   flags: {
-    "new-agent": {
+    "new-checkout": {
       type: "boolean",
       enabled: true,
       variations: { off: false, on: true },
@@ -46,18 +92,9 @@ const ruleset = defineRuleset({
       targets: [],
       rules: [
         {
-          id: "public-rollout",
-          conditions: [],
-          serve: {
-            rollout: {
-              bucketBy: "targetingKey",
-              salt: "new-agent:public-rollout",
-              splits: [
-                { variation: "on", weight: 1000 },
-                { variation: "off", weight: 9000 }
-              ]
-            }
-          }
+          id: "pro-beta",
+          conditions: [{ attribute: "plan", op: "eq", value: "pro" }],
+          serve: { variation: "on" }
         }
       ]
     }
@@ -67,142 +104,159 @@ const ruleset = defineRuleset({
 const flags = createClient({ source: staticSource(ruleset) });
 await flags.waitUntilReady();
 
-const enabled = flags.isEnabled(
-  "new-agent",
-  { targetingKey: account.id, plan: account.plan },
+const result = flags.evaluate(
+  "new-checkout",
+  { targetingKey: "org_123", plan: "pro" },
   { default: false }
 );
+
+console.log(result.value, result.reason, result.ruleId);
+// true TARGETING_MATCH pro-beta
+
+await flags.close();
 ```
 
-Weights are basis points and must total 10,000. Stable UTF-8 FNV-1a bucketing means the same
-targeting key, flag key, and salt always produce the same assignment. Put the new variation
-first when ramping a boolean rollout so increasing 10% to 20% only adds accounts.
+<!-- /example -->
 
-For business products, use an account or organization ID as `targetingKey` when everyone in
-that organization should move together.
+Use an authenticated account or organization ID as `targetingKey` when everyone in that
+organization should get the same experience. Use a user ID for individual rollouts.
+Supply attributes from trusted application state—not from an unverified browser request.
 
-## Live configuration
+Create one long-lived client per environment per application process, reuse it for requests,
+and close it during shutdown. `staticSource` is fixed configuration; use a file or HTTP source
+when you want updates without restarting.
 
-Embed the optional reference server in any Node process:
+## Change a rollout without redeploying
 
-```ts
-import { createFlagServer, MemoryRulesetStore } from "@coduck/flags-server";
+The optional server distributes configuration. The management SDK edits it. Your running
+application keeps evaluating its local snapshot.
 
-const server = createFlagServer({
-  store: new MemoryRulesetStore([ruleset]),
-  readKeys: [process.env.FLAGS_SDK_KEY!],
-  adminKeys: [process.env.FLAGS_ADMIN_KEY!]
-});
-
-const { url } = await server.start();
+```text
+Your admin UI or automation → management SDK → your configuration server
+                                                       ↓ HTTP/SSE
+                                              application SDK → feature
+                                              local evaluation
 ```
 
-Point the runtime SDK at it. SSE delivers changes immediately; conditional HTTP polling is
-the recovery path. Evaluation itself never performs I/O.
+Once a flag exists, management operations are ordinary code:
 
-```ts
-import { createClient, fileCache, httpSource } from "@coduck/flags";
-
-const flags = createClient({
-  environment: "production",
-  source: httpSource({
-    url: process.env.FLAGS_URL!,
-    environment: "production",
-    sdkKey: process.env.FLAGS_SDK_KEY!
-  }),
-  cache: fileCache("./.coduck-flags/production.json"),
-  staleAfterMs: 90_000,
-  onError: (error) => logger.warn({ error }, "Flag source problem")
-});
-```
-
-Manage it through code—not a required CLI:
-
-```ts
+```js
 import { createManagementClient } from "@coduck/flags-management";
 
 const admin = createManagementClient({
-  url: process.env.FLAGS_URL!,
-  adminKey: process.env.FLAGS_ADMIN_KEY!
+  url: process.env.FLAGS_URL,
+  adminKey: process.env.FLAGS_ADMIN_KEY
 });
 
-await admin.setBooleanRollout("new-agent", 25, { environment: "production" });
-await admin.setEnabled("production", "new-agent", false); // kill switch
+await admin.setBooleanRollout("new-checkout", 10, { environment: "production" });
+await admin.setBooleanRollout("new-checkout", 25, { environment: "production" });
+await admin.setBooleanRollout("new-checkout", 100, { environment: "production" });
+await admin.setEnabled("production", "new-checkout", false); // emergency shutoff
 ```
 
-The rollout helper appends its rule so existing, more-specific targeting rules keep priority.
-Updating that rollout later preserves its position and salt.
+Start with an off-by-default flag, for example `booleanFlag({ default: false })` from the
+management package. The rollout helper appends an ordered rule; earlier matching rules and
+exact targets still take priority. A 100% rollout is not an override of every other rule.
+The kill switch is: once its revision arrives, `enabled: false` serves `offVariation` before
+targets or rollout rules. An offline instance cannot receive a new kill-switch revision.
 
-Every publish is a complete validated snapshot with a monotonic revision. Concurrent writers
-use `If-Match`; stale writes fail rather than silently overwriting newer configuration.
+Run the complete local create → connect → release → disable example:
 
-## Evaluation order
-
-1. Missing flag or type mismatch → caller default with an error reason.
-2. Disabled flag → `offVariation` immediately.
-3. Exact targeting-key overrides.
-4. First matching ordered rule, including reusable segments.
-5. Stable percentage split when the rule serves a rollout.
-6. `defaultVariation` when nothing matches.
-
-`evaluate()` returns the value, named variant, reason, matched rule, environment and revision.
-Convenience methods return only the typed value. `evaluateMany()` requires an explicit map of
-defaults; that map is also an allowlist, preventing accidental exposure of backend-only flags.
-
-## Failure behavior
-
-- Evaluations are synchronous, local, and do not throw.
-- Invalid snapshots are rejected and reported without replacing the current snapshot.
-- A revision cannot change content without being incremented.
-- Older revisions are ignored.
-- File persistence uses an atomic temporary-write-and-rename operation.
-- HTTP delivery requires TLS except on localhost or explicit development overrides.
-- Read and administration credentials are separate.
-- Source failures leave the last valid snapshot active.
-- A disk-cached snapshot is immediately usable but remains marked stale until a live source confirms it.
-- `getStatus()` exposes revision, source, freshness and staleness for health checks.
-- Evaluation telemetry excludes the targeting key and all context attributes by design.
-
-## OpenFeature
-
-```ts
-import { OpenFeature } from "@openfeature/server-sdk";
-import { createOpenFeatureProvider } from "@coduck/flags-openfeature";
-
-await OpenFeature.setProviderAndWait(createOpenFeatureProvider(flags));
-const client = OpenFeature.getClient();
-const enabled = await client.getBooleanValue("new-agent", false, {
-  targetingKey: account.id
-});
+```sh
+pnpm example:live
 ```
 
-## Development
+[Read the runnable example](examples/live-rollout.mjs) ·
+[Set up persistent hosting](docs/production.md#hosting-the-optional-server)
 
-Requires Node 20+ and pnpm.
+## What does “25%” mean?
 
-```bash
-pnpm install
-pnpm check
-pnpm proof
-pnpm proof:browser
-pnpm benchmark
+Flags deterministically hashes the targeting value, flag key, and salt into 10,000 buckets.
+An on-first split with weight `2500` selects buckets below `2500`. Repeated evaluations do
+not reroll a user's assignment.
+
+Increasing that first split from 25% to 50% adds accounts without removing the original
+cohort, provided the targeting value, flag key, salt, and eligibility conditions stay the
+same. It is approximately 25% of identities—not a hard quota, not 25% of requests, and not
+necessarily 25% of currently active users. Changing identity or salt changes assignment.
+
+[Targeting recipes and rule precedence →](docs/targeting.md)
+
+## Packages
+
+Install only the pieces you need. Each package has its own README and public types.
+
+| Package                                               | Responsibility                                                              |
+| ----------------------------------------------------- | --------------------------------------------------------------------------- |
+| [`@coduck/flags`](packages/sdk)                       | Node.js runtime: local evaluation, sources, cache, lifecycle and events     |
+| [`@coduck/flags-core`](packages/core)                 | Zero-runtime-dependency evaluation and validation engine; JSON Schema       |
+| [`@coduck/flags-management`](packages/management)     | Create environments, publish revisions, target accounts and change rollouts |
+| [`@coduck/flags-server`](packages/server)             | Optional single-node HTTP/SSE server with memory and file stores            |
+| [`@coduck/flags-openfeature`](packages/openfeature)   | Provider for the OpenFeature server SDK                                     |
+| [`@coduck/flags-test-vectors`](packages/test-vectors) | Language-neutral hashing/bucketing compatibility vectors                    |
+
+The runtime is server-side, not a browser SDK. Do not ship its keys or full rulesets to a
+browser. Evaluate on your server and expose an explicit allowlist of results.
+
+## When something fails
+
+| Situation                                                 | Behavior                                                         |
+| --------------------------------------------------------- | ---------------------------------------------------------------- |
+| No usable configuration, missing flag or wrong type       | Return the caller's default and an error reason                  |
+| Invalid incoming snapshot                                 | Reject it; retain the last valid snapshot and report the problem |
+| Source unavailable                                        | Continue from the last valid snapshot; expose staleness          |
+| Startup from disk cache                                   | Allow evaluation, but remain stale until live confirmation       |
+| Older revision or changed content under the same revision | Do not replace the accepted snapshot                             |
+| Concurrent management edits                               | Reject stale writes; `update()` retries revision conflicts       |
+| Evaluation observer throws                                | Isolate the observer; do not break evaluation                    |
+
+`waitUntilReady()` means usable configuration exists, not that every server has the newest
+revision. Monitor `getStatus()` for freshness. Creation, validation, readiness, and management
+operations can throw; flag evaluations return safe defaults with reason details.
+
+## How do you know users got it?
+
+Check three separate facts: the application **loaded the revision**, the account **was assigned
+the expected variant**, and the application **actually used or displayed the feature**.
+
+Flags exposes revision/status events and optional evaluation hooks. These do not automatically
+record product exposure, send telemetry to CoDuck, or prove a customer saw a screen. Emit an
+application-owned exposure event at the actual point of use and connect it to your monitoring.
+
+[Operational checklist and observability →](docs/production.md)
+
+## Verification
+
+The committed baseline includes 71 automated tests, a million-evaluation monotonic ramp,
+a million-identity distribution check, 24 concurrent writers, 9 real HTTP/SSE protocol checks,
+and 38 browser assertions across eight recorded consumer journeys. Five viewport sizes were
+checked. These are synthetic accounts and a real local SDK integration—not a claim of a
+production rollout or a bug-free system.
+
+The release gate also installs the packed SDK in a clean project. The quickstart shown above
+is checked against its runnable source so documentation cannot silently drift from the example.
+
+[Assertion ledger](proof/flags-sdk/REPORT.md) ·
+[Download/open the recorded proof](proof/flags-sdk/REPORT.html) ·
+[Evidence limits](proof/flags-sdk/VALIDATION.md) · [Test source](tests)
+
+## Contribute and release
+
+```sh
+pnpm install --frozen-lockfile
+pnpm check           # format, types, tests, coverage, packages and docs
+pnpm proof           # real HTTP/SSE protocol checks
+pnpm proof:browser   # recorded consumer journeys; needs Chrome/Playwright
+pnpm release:pack    # build, pack, isolated install and consumer verification
 ```
 
-`pnpm check` includes types, coverage, package validation, ESM/CommonJS consumer checks,
-one million evaluation ramps, one million bucketing samples, and 24 concurrent writers.
-`pnpm proof` exercises built packages over real HTTP/SSE. `pnpm proof:browser` starts a
-proof-only consumer of the actual SDK (not a shipped dashboard), drives Chrome through
-rollouts, holdouts, kill switches, restart persistence, outages, and rejected writes,
-and records every journey. It also checks five viewport sizes. Set `PROOF_CHROME` to
-your Chrome executable or run `pnpm exec playwright install chromium`; install `ffmpeg`
-to generate cursor-baked MP4s and the GIF in addition to raw recordings.
+Browser proof can use `PROOF_CHROME=/path/to/chrome`; otherwise install Chromium with
+`pnpm exec playwright install chromium`. FFmpeg adds the shareable cursor-baked videos and GIF.
 
-Open [the interactive proof](./proof/flags-sdk/REPORT.html),
-[its assertion ledger](./proof/flags-sdk/REPORT.md), or
-[the protocol results](./proof/flags-sdk/PROTOCOL.md).
-The exact tested checkout is recorded in `proof/flags-sdk/source.json`.
-This proves a local, real consumer integration—not CoDuck production, a multi-node
-control plane, or a guarantee that every possible failure has been tested.
+Read [CONTRIBUTING.md](CONTRIBUTING.md), the [versioned contract](SPEC.md),
+[release instructions](RELEASING.md), and [changelog](CHANGELOG.md).
+Report vulnerabilities privately using [SECURITY.md](SECURITY.md).
 
-See [SPEC.md](./SPEC.md) for the stable evaluation and delivery contracts, and
-[SECURITY.md](./SECURITY.md) for the trust boundaries.
+## License
+
+[MIT](LICENSE). Built by [CoDuck](https://github.com/CoDuckAI).

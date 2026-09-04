@@ -4,9 +4,8 @@ An embeddable, single-node reference server for versioned CoDuck Flags rulesets.
 optional transport and persistence adapter—not a required hosted control plane. It exposes
 authenticated snapshot, SSE stream and administrative publish endpoints.
 
-```bash
-pnpm add @coduck/flags-server
-```
+See the root [installation status](https://github.com/CoDuckAI/flags#install) during the initial
+release. After npm publication: `npm install @coduck/flags-server`.
 
 ```ts
 import { createFlagServer, FileRulesetStore } from "@coduck/flags-server";

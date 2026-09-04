@@ -15,6 +15,7 @@
 
 ## Reporting a vulnerability
 
-Please report suspected vulnerabilities privately through GitHub Security Advisories for the
-`CoDuckAI/flags` repository. Do not open a public issue containing exploitation details or
-credentials.
+Use GitHub's private vulnerability reporting for `CoDuckAI/flags` when the **Report a
+vulnerability** option is available in the Security tab. If it is unavailable, open an issue
+requesting a private reporting channel without including vulnerability details. Never put
+exploitation details, customer data or credentials in a public issue.

@@ -12,3 +12,9 @@
 - Added the OpenFeature server provider and language-neutral bucketing test vectors.
 - Added security documentation, package verification, property tests, a live consumer proof
   and a repeatable benchmark.
+- Added complete runnable quickstart/live-rollout examples, targeting and operations guides,
+  checked README examples, and explicit delivery/assignment/exposure boundaries.
+- Added lockstep release tarballs, per-package licenses and integrity receipts, isolated
+  consumer installation, ESM/CommonJS and TypeScript package checks, and a guarded manual
+  npm trusted-publishing workflow.
+- Added Node.js 20/22/24 CI coverage. The declared minimum is Node.js 20.19.0.
