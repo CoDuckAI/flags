@@ -1,0 +1,56 @@
+{
+  "name": "@coduck/flags-core",
+  "version": "0.1.0",
+  "description": "Deterministic, zero-dependency feature flag evaluation engine",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoDuckAI/flags.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/CoDuckAI/flags#readme",
+  "bugs": {
+    "url": "https://github.com/CoDuckAI/flags/issues"
+  },
+  "keywords": [
+    "feature-flags",
+    "rollout",
+    "typescript",
+    "openfeature"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "ruleset.schema.json"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./ruleset.schema.json": "./ruleset.schema.json"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "typecheck": "tsc --noEmit",
+    "publint": "publint"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

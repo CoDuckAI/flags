@@ -1,0 +1,38 @@
+{
+  "name": "coduck-flags-monorepo",
+  "private": true,
+  "description": "Headless, deterministic feature rollout SDK for TypeScript applications",
+  "license": "MIT",
+  "repository": "github:CoDuckAI/flags",
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "benchmark": "pnpm build && node benchmarks/evaluate.mjs",
+    "proof": "pnpm build && node proof/flags-sdk/run.mjs",
+    "package:smoke": "pnpm build && node scripts/package-smoke.mjs",
+    "format": "prettier --write package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md",
+    "format:check": "prettier --check package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md",
+    "typecheck": "pnpm build && pnpm -r --if-present typecheck && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check": "pnpm format:check && pnpm typecheck && pnpm test:coverage && pnpm build && pnpm publint && pnpm package:smoke",
+    "publint": "pnpm -r --if-present publint"
+  },
+  "devDependencies": {
+    "@openfeature/server-sdk": "^1.23.0",
+    "@vitest/coverage-v8": "^5.0.0",
+    "@types/node": "^26.4.1",
+    "ajv": "^8.20.0",
+    "fast-check": "^4.9.0",
+    "prettier": "^3.9.6",
+    "publint": "^0.3.24",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.0"
+  }
+}
