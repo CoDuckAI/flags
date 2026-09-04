@@ -36,7 +36,8 @@ analytics platform, an authorization system, or a managed multi-region control p
 
 ## Install
 
-Node.js **20.19+** is required for the runtime and server packages. Use a supported Node.js
+Node.js **22.13+** is required. CI verifies Node 22 and 24, including installs from the packed SDK.
+Use a supported Node.js
 release for production. Package names shown here are not a claim of registry availability.
 
 Until npm publication, build from this repository:

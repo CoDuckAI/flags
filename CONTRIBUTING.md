@@ -1,6 +1,6 @@
 # Contributing
 
-Use Node 20.19+ and the pnpm version pinned in `package.json`. Install dependencies and run the complete verification gate before
+Use Node 22.13+ and the pnpm version pinned in `package.json`. Install dependencies and run the complete verification gate before
 opening a pull request:
 
 ```bash
