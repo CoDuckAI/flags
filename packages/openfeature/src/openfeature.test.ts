@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { OpenFeature } from "@openfeature/server-sdk";
-import { createClient, staticSource } from "@coduck/flags";
+import { createClient, staticSource } from "@coduckai/flags";
 import { fixtureRuleset } from "../../../tests/fixtures.js";
 import { createOpenFeatureProvider } from "./index.js";
 

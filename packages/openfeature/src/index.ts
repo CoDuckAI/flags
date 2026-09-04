@@ -11,8 +11,8 @@ import type {
   Provider,
   ResolutionDetails
 } from "@openfeature/server-sdk";
-import type { EvaluationContext, EvaluationDetails, JsonValue } from "@coduck/flags";
-import { FlagClient } from "@coduck/flags";
+import type { EvaluationContext, EvaluationDetails, JsonValue } from "@coduckai/flags";
+import { FlagClient } from "@coduckai/flags";
 
 export interface CoDuckProviderOptions {
   readyTimeoutMs?: number;

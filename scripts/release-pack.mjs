@@ -63,7 +63,7 @@ try {
       "published manifest contains workspace protocol"
     );
     for (const [name, dependency] of Object.entries(packed.dependencies ?? {})) {
-      if (name.startsWith("@coduck/")) assert.equal(dependency, version);
+      if (name.startsWith("@coduckai/")) assert.equal(dependency, version);
     }
     if (manifest.directory !== "test-vectors") {
       for (const file of ["index.js", "index.cjs", "index.d.ts", "index.d.cts"]) {
@@ -119,11 +119,11 @@ try {
   }
 
   const exports = [
-    ["@coduck/flags-core", "defineRuleset"],
-    ["@coduck/flags", "createClient"],
-    ["@coduck/flags-management", "createManagementClient"],
-    ["@coduck/flags-server", "createFlagServer"],
-    ["@coduck/flags-openfeature", "createOpenFeatureProvider"]
+    ["@coduckai/flags-core", "defineRuleset"],
+    ["@coduckai/flags", "createClient"],
+    ["@coduckai/flags-management", "createManagementClient"],
+    ["@coduckai/flags-server", "createFlagServer"],
+    ["@coduckai/flags-openfeature", "createOpenFeatureProvider"]
   ];
   writeFileSync(
     join(consumer, "exports.cjs"),
@@ -134,7 +134,7 @@ try {
             `assert.equal(typeof require(${JSON.stringify(name)})[${JSON.stringify(symbol)}], "function");`
         )
         .join("\n") +
-      '\nassert.ok(require("@coduck/flags-test-vectors"));\nassert.ok(require("@coduck/flags-core/ruleset.schema.json"));\n'
+      '\nassert.ok(require("@coduckai/flags-test-vectors"));\nassert.ok(require("@coduckai/flags-core/ruleset.schema.json"));\n'
   );
   run(process.execPath, ["exports.cjs"], consumer);
   writeFileSync(

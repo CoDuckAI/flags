@@ -19,5 +19,5 @@ export type {
   JsonValue,
   RuleDefinition,
   Ruleset
-} from "@coduck/flags-core";
-export { defineRuleset, validateRuleset } from "@coduck/flags-core";
+} from "@coduckai/flags-core";
+export { defineRuleset, validateRuleset } from "@coduckai/flags-core";

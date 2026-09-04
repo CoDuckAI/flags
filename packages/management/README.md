@@ -1,14 +1,15 @@
-# `@coduck/flags-management`
+# `@coduckai/flags-management`
 
 The UI-independent administrative SDK for CoDuck Flags. It publishes complete validated
 ruleset revisions with optimistic concurrency and exposes small helpers for common changes.
 A dashboard, internal admin route, automation, or script can all use the same API.
 
-See the root [installation status](https://github.com/CoDuckAI/flags#install) during the initial
-release. After npm publication: `npm install @coduck/flags-management`.
+```sh
+npm install @coduckai/flags-management
+```
 
 ```ts
-import { createManagementClient } from "@coduck/flags-management";
+import { createManagementClient } from "@coduckai/flags-management";
 
 const flags = createManagementClient({
   url: process.env.FLAGS_URL!,

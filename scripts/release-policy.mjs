@@ -4,12 +4,12 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
 export const PACKAGE_NAMES = [
-  "@coduck/flags-core",
-  "@coduck/flags",
-  "@coduck/flags-management",
-  "@coduck/flags-server",
-  "@coduck/flags-openfeature",
-  "@coduck/flags-test-vectors"
+  "@coduckai/flags-core",
+  "@coduckai/flags",
+  "@coduckai/flags-management",
+  "@coduckai/flags-server",
+  "@coduckai/flags-openfeature",
+  "@coduckai/flags-test-vectors"
 ];
 
 export function releaseVersion(tag) {

@@ -8,13 +8,13 @@ importers:
 
   .:
     devDependencies:
-      '@coduck/flags':
+      '@coduckai/flags':
         specifier: workspace:*
         version: link:packages/sdk
-      '@coduck/flags-management':
+      '@coduckai/flags-management':
         specifier: workspace:*
         version: link:packages/management
-      '@coduck/flags-server':
+      '@coduckai/flags-server':
         specifier: workspace:*
         version: link:packages/server
       '@openfeature/server-sdk':
@@ -55,13 +55,13 @@ importers:
 
   packages/management:
     dependencies:
-      '@coduck/flags-core':
+      '@coduckai/flags-core':
         specifier: workspace:*
         version: link:../core
 
   packages/openfeature:
     dependencies:
-      '@coduck/flags':
+      '@coduckai/flags':
         specifier: workspace:*
         version: link:../sdk
       '@openfeature/server-sdk':
@@ -70,13 +70,13 @@ importers:
 
   packages/sdk:
     dependencies:
-      '@coduck/flags-core':
+      '@coduckai/flags-core':
         specifier: workspace:*
         version: link:../core
 
   packages/server:
     dependencies:
-      '@coduck/flags-core':
+      '@coduckai/flags-core':
         specifier: workspace:*
         version: link:../core
 

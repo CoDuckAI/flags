@@ -7,7 +7,7 @@ only the individual packages are publishable. A GitHub release is not npm public
 
 `0.1.0` is the initial release line. The SDK implementation and local consumer evidence exist;
 production adoption, a managed fleet service, and public npm publication are separate milestones.
-Before publication, confirm ownership/write access for the `@coduck` npm scope. An unavailable
+Before publication, confirm ownership/write access for the `@coduckai` npm scope. An unavailable
 public registry lookup does not prove that a scope or name is yours to publish.
 
 ## Prepare a release
@@ -61,6 +61,15 @@ Do not change account security settings or create publish credentials just to by
 error. Initial publication may require an authorized maintainer's interactive npm login/2FA.
 If package ownership or scope access is unresolved, stop before publishing. Never publish
 placeholder packages just to claim a name.
+
+For the first release, npm requires the packages to exist before a trusted publisher can be
+configured. Publish the verified, real release archives using the authorized maintainer's
+interactive npm login and 2FA. Local bootstrap cannot generate GitHub provenance; use
+`npm publish <verified-archive.tgz> --access public --provenance=false` and disclose that
+the bootstrap version has no build-provenance attestation. Do not run `scripts/publish.mjs`
+locally or impersonate a GitHub Actions environment. Configure trusted publishing afterward
+so subsequent versions use the guarded workflow above. If 2FA is not enabled, the account
+owner must enroll their own authenticator or security key before publication can finish.
 
 After the account setup and public-repository approval, dispatch **Publish SDK** with the
 exact tag, for example `v0.1.0`. The workflow rejects a package/tag version mismatch and dirty

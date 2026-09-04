@@ -1,5 +1,5 @@
 {
-  "name": "@coduck/flags-test-vectors",
+  "name": "@coduckai/flags-test-vectors",
   "version": "0.1.0",
   "description": "Language-neutral compatibility vectors for CoDuck Flags bucketing",
   "license": "MIT",

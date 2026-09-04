@@ -1,8 +1,8 @@
 import { createServer } from "node:http";
 import type { IncomingMessage, Server, ServerResponse } from "node:http";
 import { timingSafeEqual } from "node:crypto";
-import { RulesetValidationError, assertRuleset } from "@coduck/flags-core";
-import type { Ruleset } from "@coduck/flags-core";
+import { RulesetValidationError, assertRuleset } from "@coduckai/flags-core";
+import type { Ruleset } from "@coduckai/flags-core";
 import { MemoryRulesetStore, RevisionConflictError } from "./store.js";
 import type { RulesetStore } from "./store.js";
 

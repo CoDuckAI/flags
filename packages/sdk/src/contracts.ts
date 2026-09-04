@@ -1,4 +1,4 @@
-import type { EvaluationTelemetry, Ruleset } from "@coduck/flags-core";
+import type { EvaluationTelemetry, Ruleset } from "@coduckai/flags-core";
 
 export interface FlagSourceHandlers {
   /** Returns true only when the runtime accepted the snapshot. */

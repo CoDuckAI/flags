@@ -1,18 +1,15 @@
-# `@coduck/flags-openfeature`
+# `@coduckai/flags-openfeature`
 
-An OpenFeature server provider backed by `@coduck/flags`. Applications can use the
+An OpenFeature server provider backed by `@coduckai/flags`. Applications can use the
 vendor-neutral OpenFeature API while CoDuck performs deterministic local evaluation.
 
-See the root [installation status](https://github.com/CoDuckAI/flags#install) during the initial
-release. After npm publication:
-
 ```sh
-npm install @coduck/flags @coduck/flags-openfeature @openfeature/server-sdk
+npm install @coduckai/flags @coduckai/flags-openfeature @openfeature/server-sdk
 ```
 
 ```ts
 import { OpenFeature } from "@openfeature/server-sdk";
-import { createOpenFeatureProvider } from "@coduck/flags-openfeature";
+import { createOpenFeatureProvider } from "@coduckai/flags-openfeature";
 
 await OpenFeature.setProviderAndWait(createOpenFeatureProvider(flags));
 const client = OpenFeature.getClient();

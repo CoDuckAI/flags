@@ -1,11 +1,11 @@
-import { evaluateFlag, RulesetValidationError, validateRuleset } from "@coduck/flags-core";
+import { evaluateFlag, RulesetValidationError, validateRuleset } from "@coduckai/flags-core";
 import type {
   EvaluationContext,
   EvaluationDetails,
   EvaluationTelemetry,
   JsonValue,
   Ruleset
-} from "@coduck/flags-core";
+} from "@coduckai/flags-core";
 import type {
   FlagClientEvents,
   FlagClientOptions,

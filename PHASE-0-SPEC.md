@@ -4,8 +4,8 @@ This file originally described the planning direction used to start the reposito
 draft is preserved in Git history, but it is not the product contract.
 
 The implemented v1 is deliberately headless and SDK-first. It does **not** ship a CLI or UI.
-Applications evaluate flags through `@coduck/flags`; any dashboard, automation, or internal
-tool can build on `@coduck/flags-management` and the documented HTTP protocol.
+Applications evaluate flags through `@coduckai/flags`; any dashboard, automation, or internal
+tool can build on `@coduckai/flags-management` and the documented HTTP protocol.
 
 Use these maintained documents instead:
 

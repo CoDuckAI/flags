@@ -17,4 +17,5 @@
 - Added lockstep release tarballs, per-package licenses and integrity receipts, isolated
   consumer installation, ESM/CommonJS and TypeScript package checks, and a guarded manual
   npm trusted-publishing workflow.
-- Added Node.js 20/22/24 CI coverage. The declared minimum is Node.js 20.19.0.
+- Added Node.js 22/24 CI coverage. The declared minimum is Node.js 22.13.0.
+- Prepared all six packages under the verified `@coduckai` npm organization scope.

@@ -1,4 +1,4 @@
-import { createClient, defineRuleset, staticSource } from "@coduck/flags";
+import { createClient, defineRuleset, staticSource } from "@coduckai/flags";
 
 const ruleset = defineRuleset({
   schemaVersion: 1,

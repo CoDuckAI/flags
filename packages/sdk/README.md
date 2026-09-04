@@ -1,17 +1,18 @@
-# `@coduck/flags`
+# `@coduckai/flags`
 
 The server-side runtime SDK for CoDuck Flags. Evaluations are synchronous and local.
 Configuration can come from a static object, a watched JSON file, an HTTP/SSE source,
 or an application-provided adapter. Source failures never replace a valid snapshot.
 
 Node.js 22.13+, ESM and CommonJS, with TypeScript declarations. The package depends only on
-`@coduck/flags-core` at runtime. No hosted account or outbound telemetry is required.
+`@coduckai/flags-core` at runtime. No hosted account or outbound telemetry is required.
 
-During the initial release, see the [installation status and tarball instructions](https://github.com/CoDuckAI/flags#install)
-before using the planned registry command: `npm install @coduck/flags`.
+```sh
+npm install @coduckai/flags
+```
 
 ```ts
-import { createClient, fileCache, httpSource } from "@coduck/flags";
+import { createClient, fileCache, httpSource } from "@coduckai/flags";
 
 const flags = createClient({
   environment: "production",

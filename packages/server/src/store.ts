@@ -1,8 +1,8 @@
 import { mkdir, readFile, rename, unlink, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import { randomUUID } from "node:crypto";
-import { assertRuleset } from "@coduck/flags-core";
-import type { Ruleset } from "@coduck/flags-core";
+import { assertRuleset } from "@coduckai/flags-core";
+import type { Ruleset } from "@coduckai/flags-core";
 
 export class RevisionConflictError extends Error {
   constructor(message: string) {

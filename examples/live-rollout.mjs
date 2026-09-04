@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
-import { createClient, httpSource } from "@coduck/flags";
-import { booleanFlag, createManagementClient } from "@coduck/flags-management";
-import { createFlagServer } from "@coduck/flags-server";
+import { createClient, httpSource } from "@coduckai/flags";
+import { booleanFlag, createManagementClient } from "@coduckai/flags-management";
+import { createFlagServer } from "@coduckai/flags-server";
 
 // Throwaway local demo keys. Use a secret manager in your application.
 const readKey = randomBytes(32).toString("hex");

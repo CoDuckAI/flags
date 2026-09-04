@@ -9,7 +9,7 @@ body:
     id: version
     attributes:
       label: SDK package and version
-      placeholder: "@coduck/flags 0.1.0"
+      placeholder: "@coduckai/flags 0.1.0"
     validations:
       required: true
   - type: input

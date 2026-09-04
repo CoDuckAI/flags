@@ -1,5 +1,5 @@
 {
-  "name": "@coduck/flags-openfeature",
+  "name": "@coduckai/flags-openfeature",
   "version": "0.1.0",
   "description": "OpenFeature provider for CoDuck Flags",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "publint": "publint"
   },
   "dependencies": {
-    "@coduck/flags": "workspace:*"
+    "@coduckai/flags": "workspace:*"
   },
   "peerDependencies": {
     "@openfeature/server-sdk": ">=1.20.0 <2"

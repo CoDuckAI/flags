@@ -30,9 +30,9 @@
     "publint": "pnpm -r --if-present publint"
   },
   "devDependencies": {
-    "@coduck/flags": "workspace:*",
-    "@coduck/flags-management": "workspace:*",
-    "@coduck/flags-server": "workspace:*",
+    "@coduckai/flags": "workspace:*",
+    "@coduckai/flags-management": "workspace:*",
+    "@coduckai/flags-server": "workspace:*",
     "@openfeature/server-sdk": "^1.23.0",
     "@types/node": "^24.13.3",
     "@vitest/coverage-v8": "^5.0.0",

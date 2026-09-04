@@ -6,7 +6,7 @@ This document describes the behavior that SDKs and compatible servers must prese
 
 A ruleset is one complete, immutable environment snapshot. It carries `schemaVersion`, a
 monotonically increasing positive `revision`, an ISO-8601 `updatedAt`, reusable segments and
-named flags. The published JSON Schema is `@coduck/flags-core/ruleset.schema.json`; semantic
+named flags. The published JSON Schema is `@coduckai/flags-core/ruleset.schema.json`; semantic
 checks that JSON Schema cannot express—such as rollout weights totaling 10,000 and referenced
 variations existing—are enforced by `validateRuleset`.
 
@@ -48,7 +48,7 @@ byte-level hash is unsigned 32-bit FNV-1a with offset basis `2166136261` and pri
 `16777619`. The final bucket is `hash % 10000`. Split order is significant; walk cumulative
 positive integer weights until the bucket is below the boundary. Weights must total 10,000.
 
-The published `@coduck/flags-test-vectors` package is normative for future SDKs. A language
+The published `@coduckai/flags-test-vectors` package is normative for future SDKs. A language
 implementation is compatible only when every vector matches exactly.
 
 Growing the first split of a two-variation rollout preserves the original cohort. Arbitrary

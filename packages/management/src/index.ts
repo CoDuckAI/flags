@@ -1,11 +1,11 @@
-import { assertRuleset } from "@coduck/flags-core";
+import { assertRuleset } from "@coduckai/flags-core";
 import type {
   Condition,
   FlagDefinition,
   RuleDefinition,
   Ruleset,
   SegmentDefinition
-} from "@coduck/flags-core";
+} from "@coduckai/flags-core";
 
 export class ManagementApiError extends Error {
   constructor(
@@ -280,4 +280,4 @@ export type {
   RuleDefinition,
   Ruleset,
   SegmentDefinition
-} from "@coduck/flags-core";
+} from "@coduckai/flags-core";

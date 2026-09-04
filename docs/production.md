@@ -21,7 +21,7 @@ The reference server is a Node.js library, not a separate required product. This
 snapshots on disk. Set two distinct secrets of at least 16 characters in your environment:
 
 ```js
-import { createFlagServer, FileRulesetStore } from "@coduck/flags-server";
+import { createFlagServer, FileRulesetStore } from "@coduckai/flags-server";
 
 function required(name) {
   const value = process.env[name];
@@ -54,7 +54,7 @@ delivery strategy. That deployment is not part of the reference server's proof.
 ## Connect the application
 
 ```js
-import { createClient, fileCache, httpSource } from "@coduck/flags";
+import { createClient, fileCache, httpSource } from "@coduckai/flags";
 
 const flags = createClient({
   environment: "production",

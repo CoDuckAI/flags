@@ -1,5 +1,5 @@
 {
-  "name": "@coduck/flags-server",
+  "name": "@coduckai/flags-server",
   "version": "0.1.0",
   "description": "Embeddable headless reference server for CoDuck Flags",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "publint": "publint"
   },
   "dependencies": {
-    "@coduck/flags-core": "workspace:*"
+    "@coduckai/flags-core": "workspace:*"
   },
   "engines": {
     "node": ">=22.13.0"

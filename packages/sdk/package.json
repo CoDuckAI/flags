@@ -1,5 +1,5 @@
 {
-  "name": "@coduck/flags",
+  "name": "@coduckai/flags",
   "version": "0.1.0",
   "description": "Headless server-side feature rollout SDK with local evaluation and live configuration",
   "license": "MIT",
@@ -45,7 +45,7 @@
     "publint": "publint"
   },
   "dependencies": {
-    "@coduck/flags-core": "workspace:*"
+    "@coduckai/flags-core": "workspace:*"
   },
   "engines": {
     "node": ">=22.13.0"

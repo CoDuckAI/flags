@@ -37,20 +37,16 @@ analytics platform, an authorization system, or a managed multi-region control p
 ## Install
 
 Node.js **22.13+** is required. CI verifies Node 22 and 24, including installs from the packed SDK.
-Use a supported Node.js
-release for production. Package names shown here are not a claim of registry availability.
+Use a supported Node.js release for production.
 
 Until npm publication, build from this repository:
 
 ```sh
-git clone --branch feat/oss-sdk-v1 https://github.com/CoDuckAI/flags.git
+git clone https://github.com/CoDuckAI/flags.git
 cd flags
 pnpm install --frozen-lockfile
 pnpm release:pack
 ```
-
-The implementation currently lives on `feat/oss-sdk-v1` ([PR #1](https://github.com/CoDuckAI/flags/pull/1));
-the default branch has not yet received the SDK. Repository access is required while it remains private.
 
 `release:pack` builds six packages, checks their contents and licenses, installs the real
 tarballs in a clean consumer project, executes both examples, and checks TypeScript imports.
@@ -59,11 +55,11 @@ The resulting archives and checksums are in `release/0.1.0/`.
 From your application's directory, install the core and runtime together:
 
 ```sh
-npm install /path/to/flags/release/0.1.0/coduck-flags-core-0.1.0.tgz \
-  /path/to/flags/release/0.1.0/coduck-flags-0.1.0.tgz
+npm install /path/to/flags/release/0.1.0/coduckai-flags-core-0.1.0.tgz \
+  /path/to/flags/release/0.1.0/coduckai-flags-0.1.0.tgz
 ```
 
-After public npm publication, the equivalent command will be `npm install @coduck/flags`.
+After public npm publication, the equivalent command will be `npm install @coduckai/flags`.
 The Git repository is a monorepo, not a directly installable npm package; install its package
 tarballs rather than passing the Git URL to `npm install`.
 
@@ -75,7 +71,7 @@ current experience. Save it as `quickstart.mjs` and run `node quickstart.mjs`.
 <!-- example: examples/quickstart.mjs -->
 
 ```js
-import { createClient, defineRuleset, staticSource } from "@coduck/flags";
+import { createClient, defineRuleset, staticSource } from "@coduckai/flags";
 
 const ruleset = defineRuleset({
   schemaVersion: 1,
@@ -142,7 +138,7 @@ Your admin UI or automation → management SDK → your configuration server
 Once a flag exists, management operations are ordinary code:
 
 ```js
-import { createManagementClient } from "@coduck/flags-management";
+import { createManagementClient } from "@coduckai/flags-management";
 
 const admin = createManagementClient({
   url: process.env.FLAGS_URL,
@@ -187,14 +183,14 @@ necessarily 25% of currently active users. Changing identity or salt changes ass
 
 Install only the pieces you need. Each package has its own README and public types.
 
-| Package                                               | Responsibility                                                              |
-| ----------------------------------------------------- | --------------------------------------------------------------------------- |
-| [`@coduck/flags`](packages/sdk)                       | Node.js runtime: local evaluation, sources, cache, lifecycle and events     |
-| [`@coduck/flags-core`](packages/core)                 | Zero-runtime-dependency evaluation and validation engine; JSON Schema       |
-| [`@coduck/flags-management`](packages/management)     | Create environments, publish revisions, target accounts and change rollouts |
-| [`@coduck/flags-server`](packages/server)             | Optional single-node HTTP/SSE server with memory and file stores            |
-| [`@coduck/flags-openfeature`](packages/openfeature)   | Provider for the OpenFeature server SDK                                     |
-| [`@coduck/flags-test-vectors`](packages/test-vectors) | Language-neutral hashing/bucketing compatibility vectors                    |
+| Package                                                 | Responsibility                                                              |
+| ------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [`@coduckai/flags`](packages/sdk)                       | Node.js runtime: local evaluation, sources, cache, lifecycle and events     |
+| [`@coduckai/flags-core`](packages/core)                 | Zero-runtime-dependency evaluation and validation engine; JSON Schema       |
+| [`@coduckai/flags-management`](packages/management)     | Create environments, publish revisions, target accounts and change rollouts |
+| [`@coduckai/flags-server`](packages/server)             | Optional single-node HTTP/SSE server with memory and file stores            |
+| [`@coduckai/flags-openfeature`](packages/openfeature)   | Provider for the OpenFeature server SDK                                     |
+| [`@coduckai/flags-test-vectors`](packages/test-vectors) | Language-neutral hashing/bucketing compatibility vectors                    |
 
 The runtime is server-side, not a browser SDK. Do not ship its keys or full rulesets to a
 browser. Evaluate on your server and expose an explicit allowlist of results.

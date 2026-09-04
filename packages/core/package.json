@@ -1,5 +1,5 @@
 {
-  "name": "@coduck/flags-core",
+  "name": "@coduckai/flags-core",
   "version": "0.1.0",
   "description": "Deterministic, zero-dependency feature flag evaluation engine",
   "license": "MIT",
