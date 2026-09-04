@@ -3,6 +3,7 @@
 **Deploy the code. Decide who gets it.**
 
 [![CI](https://github.com/CoDuckAI/flags/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CoDuckAI/flags/actions/workflows/ci.yml)
+[![npm](https://img.shields.io/npm/v/@coduckai/flags.svg)](https://www.npmjs.com/package/@coduckai/flags)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-first-3178c6.svg)](packages/sdk)
 
@@ -17,9 +18,8 @@ evaluate a flag.
 [Targeting](docs/targeting.md) · [Production guide](docs/production.md) ·
 [Proof](proof/flags-sdk/REPORT.md) · [Releases](https://github.com/CoDuckAI/flags/releases)
 
-> **Release status:** `0.1.0` is the initial SDK release line. npm publication is pending;
-> the package names below are not yet installable from the public npm registry.
-> Build and install the verified tarballs using the instructions below.
+> **Available on npm:** [CoDuck Flags `0.1.0`](https://www.npmjs.com/package/@coduckai/flags).
+> An open-source, self-hostable SDK—not a hosted service.
 
 ## Why Flags?
 
@@ -39,11 +39,22 @@ analytics platform, an authorization system, or a managed multi-region control p
 Node.js **22.13+** is required. CI verifies Node 22 and 24, including installs from the packed SDK.
 Use a supported Node.js release for production.
 
-Until npm publication, build from this repository:
+```sh
+npm install @coduckai/flags
+```
+
+That's the standard SDK install. Its core dependency is included automatically;
+the management SDK, reference server and OpenFeature adapter are optional.
+
+<details>
+<summary>Build and install from source instead</summary>
+
+To reproduce the `0.1.0` release:
 
 ```sh
 git clone https://github.com/CoDuckAI/flags.git
 cd flags
+git checkout v0.1.0
 pnpm install --frozen-lockfile
 pnpm release:pack
 ```
@@ -59,9 +70,10 @@ npm install /path/to/flags/release/0.1.0/coduckai-flags-core-0.1.0.tgz \
   /path/to/flags/release/0.1.0/coduckai-flags-0.1.0.tgz
 ```
 
-After public npm publication, the equivalent command will be `npm install @coduckai/flags`.
 The Git repository is a monorepo, not a directly installable npm package; install its package
 tarballs rather than passing the Git URL to `npm install`.
+
+</details>
 
 ## Quickstart
 

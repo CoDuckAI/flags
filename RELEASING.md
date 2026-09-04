@@ -5,10 +5,15 @@ only the individual packages are publishable. A GitHub release is not npm public
 
 ## Current release line
 
-`0.1.0` is the initial release line. The SDK implementation and local consumer evidence exist;
-production adoption, a managed fleet service, and public npm publication are separate milestones.
-Before publication, confirm ownership/write access for the `@coduckai` npm scope. An unavailable
-public registry lookup does not prove that a scope or name is yours to publish.
+`0.1.0` is published publicly under the `@coduckai` npm scope. All six packages were published
+from the verified archives at tag `v0.1.0`, source commit
+`e24e70a8fa4e32cf3967b59a1800d8f9a5399165`. The initial release used interactive maintainer
+authentication and has no build-provenance attestation. Trusted-publisher account setup is
+not yet configured; the workflow below is prepared for a future release.
+
+Production adoption and a managed fleet service are separate milestones. For future releases,
+reconfirm scope/package write access. An unavailable public registry lookup does not prove
+that a scope or name is yours to publish.
 
 ## Prepare a release
 
@@ -31,7 +36,8 @@ written beside the archives. Generated archives are not source files and are ign
 ## Create the GitHub release
 
 Create an annotated `v<version>` tag on the verified main commit. Attach all six `.tgz` files,
-`SHA256SUMS.txt` and `manifest.json` to the matching GitHub release. Release notes must explicitly
+`SHA256SUMS.txt`, `manifest.json` and the post-publication `registry-verification.json` when
+available to the matching GitHub release. Release notes must explicitly
 state whether the packages are available on npm. Do not use an npm version badge before
 registry verification succeeds.
 
