@@ -1,0 +1,9157 @@
+{
+ "device": "desktop",
+ "viewport": {
+  "width": 1280,
+  "height": 800
+ },
+ "overlay": true,
+ "pace": {
+  "travel": 550,
+  "settle": 260,
+  "press": 90,
+  "after": 700,
+  "nav": 1400,
+  "type": 45
+ },
+ "journeys": {
+  "01-live-rollout": {
+   "t0": 1788493533996,
+   "events": [
+    {
+     "t": 575,
+     "kind": "nav",
+     "label": "the release manager opens the live rollout lab"
+    },
+    {
+     "t": 2007,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the running consumer starts on revision 1"
+    },
+    {
+     "t": 2010,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the early-cohort account starts on the established checkout"
+    },
+    {
+     "t": 2011,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the application reports a connected source"
+    },
+    {
+     "t": 2893,
+     "kind": "shot",
+     "label": "before-rollout"
+    },
+    {
+     "t": 4246,
+     "kind": "tap",
+     "x": 834.5859375,
+     "y": 225.3515625,
+     "label": "the release manager ramps the feature to 25 percent",
+     "path": [
+      [
+       2945,
+       640,
+       752
+      ],
+      [
+       2961,
+       639.9,
+       751.7
+      ],
+      [
+       2978,
+       639.8,
+       751
+      ],
+      [
+       3000,
+       639.5,
+       749.8
+      ],
+      [
+       3013,
+       639.2,
+       747.8
+      ],
+      [
+       3034,
+       638.6,
+       745
+      ],
+      [
+       3055,
+       637.9,
+       741.2
+      ],
+      [
+       3073,
+       637.1,
+       736.4
+      ],
+      [
+       3111,
+       636.3,
+       730.4
+      ],
+      [
+       3128,
+       635.3,
+       723.3
+      ],
+      [
+       3144,
+       634.5,
+       715
+      ],
+      [
+       3164,
+       633.8,
+       705.4
+      ],
+      [
+       3178,
+       633.2,
+       694.6
+      ],
+      [
+       3196,
+       633.1,
+       682.6
+      ],
+      [
+       3228,
+       633.3,
+       669.4
+      ],
+      [
+       3244,
+       634.1,
+       655
+      ],
+      [
+       3261,
+       635.4,
+       639.5
+      ],
+      [
+       3278,
+       637.5,
+       623
+      ],
+      [
+       3298,
+       640.4,
+       605.7
+      ],
+      [
+       3318,
+       644,
+       587.4
+      ],
+      [
+       3336,
+       648.6,
+       568.6
+      ],
+      [
+       3361,
+       653.9,
+       549.1
+      ],
+      [
+       3379,
+       660.1,
+       529.2
+      ],
+      [
+       3399,
+       667.1,
+       509.1
+      ],
+      [
+       3419,
+       674.9,
+       488.9
+      ],
+      [
+       3439,
+       683.3,
+       468.7
+      ],
+      [
+       3461,
+       692.2,
+       448.7
+      ],
+      [
+       3481,
+       701.6,
+       429.1
+      ],
+      [
+       3499,
+       711.4,
+       410
+      ],
+      [
+       3520,
+       721.3,
+       391.5
+      ],
+      [
+       3541,
+       731.3,
+       373.8
+      ],
+      [
+       3560,
+       741.3,
+       356.9
+      ],
+      [
+       3594,
+       751.1,
+       341
+      ],
+      [
+       3611,
+       760.7,
+       326.1
+      ],
+      [
+       3628,
+       769.9,
+       312.2
+      ],
+      [
+       3644,
+       778.6,
+       299.5
+      ],
+      [
+       3661,
+       786.7,
+       287.8
+      ],
+      [
+       3682,
+       794.3,
+       277.3
+      ],
+      [
+       3710,
+       801.2,
+       267.9
+      ],
+      [
+       3728,
+       807.5,
+       259.6
+      ],
+      [
+       3744,
+       813,
+       252.4
+      ],
+      [
+       3764,
+       817.9,
+       246.2
+      ],
+      [
+       3788,
+       822,
+       240.9
+      ],
+      [
+       3811,
+       825.5,
+       236.6
+      ],
+      [
+       3828,
+       828.3,
+       233.1
+      ],
+      [
+       3845,
+       830.5,
+       230.3
+      ],
+      [
+       3878,
+       832.1,
+       228.3
+      ],
+      [
+       3894,
+       833.3,
+       226.9
+      ],
+      [
+       3911,
+       834,
+       226
+      ],
+      [
+       3928,
+       834.4,
+       225.6
+      ],
+      [
+       3945,
+       834.6,
+       225.4
+      ],
+      [
+       3965,
+       834.6,
+       225.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 5046,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the running consumer advances to revision 2 without a restart"
+    },
+    {
+     "t": 5046,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the selected account receives the new checkout"
+    },
+    {
+     "t": 5046,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the live UI update completes in under one second"
+    },
+    {
+     "t": 5047,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the SDK explains the result as a percentage split"
+    },
+    {
+     "t": 5047,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the OpenFeature provider returns the same split result"
+    },
+    {
+     "t": 5927,
+     "kind": "shot",
+     "label": "live-rollout-visible"
+    }
+   ],
+   "net": [
+    {
+     "t": 568,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 602,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 696,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 815,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 937,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1057,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1177,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1296,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1416,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1536,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1657,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1777,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1898,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2016,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2136,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2256,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2376,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2496,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2616,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2737,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2892,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2975,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3096,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3216,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3336,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3457,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3576,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3696,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3815,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3936,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4056,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4176,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4298,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4348,
+     "method": "POST",
+     "url": "/api/rollout",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4350,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4415,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4536,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4655,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4776,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4897,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5018,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5136,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5255,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5376,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5497,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5617,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5737,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5856,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5976,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "release manager",
+     "video": "videos/01-live-rollout.webm",
+     "startedAt": 235
+    }
+   ]
+  },
+  "02-sticky-exclusion": {
+   "t0": 1788493540016,
+   "events": [
+    {
+     "t": 106,
+     "kind": "nav",
+     "label": "the reviewer opens a fresh rollout"
+    },
+    {
+     "t": 2862,
+     "kind": "tap",
+     "x": 834.5859375,
+     "y": 225.3515625,
+     "label": "the reviewer starts a 25 percent rollout",
+     "path": [
+      [
+       1560,
+       640,
+       752
+      ],
+      [
+       1586,
+       639.9,
+       751.7
+      ],
+      [
+       1593,
+       639.8,
+       751
+      ],
+      [
+       1610,
+       639.5,
+       749.8
+      ],
+      [
+       1631,
+       639,
+       747.8
+      ],
+      [
+       1651,
+       638.4,
+       744.9
+      ],
+      [
+       1676,
+       637.5,
+       741.1
+      ],
+      [
+       1693,
+       636.6,
+       736.2
+      ],
+      [
+       1712,
+       635.5,
+       730.1
+      ],
+      [
+       1732,
+       634.4,
+       722.9
+      ],
+      [
+       1753,
+       633.3,
+       714.5
+      ],
+      [
+       1772,
+       632.3,
+       704.8
+      ],
+      [
+       1793,
+       631.5,
+       693.9
+      ],
+      [
+       1814,
+       631,
+       681.8
+      ],
+      [
+       1834,
+       630.9,
+       668.5
+      ],
+      [
+       1854,
+       631.4,
+       654
+      ],
+      [
+       1873,
+       632.5,
+       638.4
+      ],
+      [
+       1910,
+       634.3,
+       621.9
+      ],
+      [
+       1927,
+       636.9,
+       604.4
+      ],
+      [
+       1943,
+       640.4,
+       586.1
+      ],
+      [
+       1960,
+       644.8,
+       567.2
+      ],
+      [
+       1976,
+       650,
+       547.7
+      ],
+      [
+       1995,
+       656.2,
+       527.8
+      ],
+      [
+       2016,
+       663.1,
+       507.6
+      ],
+      [
+       2043,
+       670.9,
+       487.4
+      ],
+      [
+       2060,
+       679.3,
+       467.3
+      ],
+      [
+       2076,
+       688.4,
+       447.3
+      ],
+      [
+       2097,
+       697.9,
+       427.8
+      ],
+      [
+       2118,
+       707.8,
+       408.7
+      ],
+      [
+       2137,
+       718,
+       390.3
+      ],
+      [
+       2160,
+       728.2,
+       372.7
+      ],
+      [
+       2178,
+       738.5,
+       355.9
+      ],
+      [
+       2197,
+       748.5,
+       340
+      ],
+      [
+       2219,
+       758.3,
+       325.2
+      ],
+      [
+       2239,
+       767.8,
+       311.5
+      ],
+      [
+       2259,
+       776.7,
+       298.8
+      ],
+      [
+       2277,
+       785.1,
+       287.3
+      ],
+      [
+       2300,
+       793,
+       276.8
+      ],
+      [
+       2320,
+       800.1,
+       267.5
+      ],
+      [
+       2339,
+       806.5,
+       259.3
+      ],
+      [
+       2377,
+       812.3,
+       252.1
+      ],
+      [
+       2395,
+       817.3,
+       245.9
+      ],
+      [
+       2411,
+       821.6,
+       240.7
+      ],
+      [
+       2426,
+       825.2,
+       236.4
+      ],
+      [
+       2443,
+       828.1,
+       233
+      ],
+      [
+       2476,
+       830.4,
+       230.3
+      ],
+      [
+       2493,
+       832.1,
+       228.3
+      ],
+      [
+       2510,
+       833.3,
+       226.9
+      ],
+      [
+       2526,
+       834,
+       226
+      ],
+      [
+       2543,
+       834.4,
+       225.6
+      ],
+      [
+       2576,
+       834.6,
+       225.4
+      ],
+      [
+       2592,
+       834.6,
+       225.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 3663,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the early cohort is included at 25 percent"
+    },
+    {
+     "t": 4549,
+     "kind": "shot",
+     "label": "early-cohort-included"
+    },
+    {
+     "t": 5704,
+     "kind": "tap",
+     "x": 598.078125,
+     "y": 216.265625,
+     "label": "the reviewer checks a holdout account",
+     "path": [
+      [
+       4593,
+       834.6,
+       225.4
+      ],
+      [
+       4610,
+       834.5,
+       225.4
+      ],
+      [
+       4626,
+       834.2,
+       225.6
+      ],
+      [
+       4643,
+       833.8,
+       225.9
+      ],
+      [
+       4660,
+       833,
+       226.3
+      ],
+      [
+       4676,
+       832,
+       226.9
+      ],
+      [
+       4693,
+       830.5,
+       227.7
+      ],
+      [
+       4709,
+       828.7,
+       228.7
+      ],
+      [
+       4726,
+       826.4,
+       229.9
+      ],
+      [
+       4743,
+       823.7,
+       231.3
+      ],
+      [
+       4760,
+       820.4,
+       232.8
+      ],
+      [
+       4776,
+       816.7,
+       234.5
+      ],
+      [
+       4794,
+       812.4,
+       236.2
+      ],
+      [
+       4810,
+       807.6,
+       237.9
+      ],
+      [
+       4826,
+       802.3,
+       239.7
+      ],
+      [
+       4843,
+       796.4,
+       241.4
+      ],
+      [
+       4860,
+       790.1,
+       242.9
+      ],
+      [
+       4877,
+       783.2,
+       244.3
+      ],
+      [
+       4893,
+       775.8,
+       245.5
+      ],
+      [
+       4910,
+       768.1,
+       246.5
+      ],
+      [
+       4926,
+       759.9,
+       247.2
+      ],
+      [
+       4943,
+       751.4,
+       247.7
+      ],
+      [
+       4960,
+       742.6,
+       247.8
+      ],
+      [
+       4976,
+       733.6,
+       247.7
+      ],
+      [
+       4993,
+       724.5,
+       247.2
+      ],
+      [
+       5010,
+       715.3,
+       246.4
+      ],
+      [
+       5027,
+       706.2,
+       245.4
+      ],
+      [
+       5043,
+       697.1,
+       244.2
+      ],
+      [
+       5062,
+       688.2,
+       242.7
+      ],
+      [
+       5077,
+       679.5,
+       241.1
+      ],
+      [
+       5093,
+       671,
+       239.3
+      ],
+      [
+       5109,
+       663,
+       237.4
+      ],
+      [
+       5127,
+       655.3,
+       235.5
+      ],
+      [
+       5143,
+       648.1,
+       233.5
+      ],
+      [
+       5160,
+       641.3,
+       231.6
+      ],
+      [
+       5177,
+       635.1,
+       229.7
+      ],
+      [
+       5193,
+       629.4,
+       227.8
+      ],
+      [
+       5210,
+       624.2,
+       226.1
+      ],
+      [
+       5226,
+       619.5,
+       224.5
+      ],
+      [
+       5242,
+       615.4,
+       223
+      ],
+      [
+       5260,
+       611.7,
+       221.6
+      ],
+      [
+       5276,
+       608.6,
+       220.4
+      ],
+      [
+       5293,
+       606,
+       219.4
+      ],
+      [
+       5309,
+       603.8,
+       218.6
+      ],
+      [
+       5326,
+       602,
+       217.9
+      ],
+      [
+       5343,
+       600.6,
+       217.3
+      ],
+      [
+       5360,
+       599.6,
+       216.9
+      ],
+      [
+       5376,
+       598.9,
+       216.6
+      ],
+      [
+       5393,
+       598.4,
+       216.4
+      ],
+      [
+       5410,
+       598.2,
+       216.3
+      ],
+      [
+       5427,
+       598.1,
+       216.3
+      ],
+      [
+       5443,
+       598.1,
+       216.3
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 6502,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the holdout account does not receive the unreleased checkout"
+    },
+    {
+     "t": 6503,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the holdout stays on the established checkout"
+    },
+    {
+     "t": 7373,
+     "kind": "shot",
+     "label": "holdout-excluded"
+    }
+   ],
+   "net": [
+    {
+     "t": 96,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 125,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 223,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 343,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 462,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 583,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 703,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 823,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 943,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1063,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1182,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1303,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1422,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1541,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1663,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1783,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1903,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2023,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2142,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2263,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2382,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2502,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2624,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2743,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2863,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2961,
+     "method": "POST",
+     "url": "/api/rollout",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2963,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2982,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3101,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3223,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3343,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3461,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3583,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3703,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3824,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3943,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4063,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4182,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4302,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4422,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4548,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4661,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4781,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4902,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5022,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5142,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5261,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5383,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5503,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5621,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5744,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5798,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5861,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5982,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6102,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6223,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6343,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6464,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6583,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6704,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6823,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6944,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7064,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7183,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7303,
+     "method": "GET",
+     "url": "/api/state?account=account-2",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "cohort reviewer",
+     "video": "videos/02-sticky-exclusion.webm",
+     "startedAt": 84
+    }
+   ]
+  },
+  "02a-unselected-cohort": {
+   "t0": 1788493547459,
+   "events": [
+    {
+     "t": 430,
+     "kind": "nav",
+     "label": "the reviewer opens an existing 25 percent rollout"
+    },
+    {
+     "t": 3233,
+     "kind": "tap",
+     "x": 384.640625,
+     "y": 216.265625,
+     "label": "the reviewer checks an account outside the boundary",
+     "path": [
+      [
+       1905,
+       640,
+       752
+      ],
+      [
+       1925,
+       640,
+       751.7
+      ],
+      [
+       1946,
+       640,
+       751
+      ],
+      [
+       1965,
+       640.1,
+       749.7
+      ],
+      [
+       1987,
+       640.1,
+       747.7
+      ],
+      [
+       2068,
+       640.2,
+       744.8
+      ],
+      [
+       2071,
+       640.2,
+       740.9
+      ],
+      [
+       2087,
+       640.2,
+       735.9
+      ],
+      [
+       2105,
+       640,
+       729.8
+      ],
+      [
+       2120,
+       639.7,
+       722.5
+      ],
+      [
+       2137,
+       639.2,
+       713.9
+      ],
+      [
+       2154,
+       638.4,
+       704.1
+      ],
+      [
+       2171,
+       637.2,
+       693
+      ],
+      [
+       2187,
+       635.5,
+       680.7
+      ],
+      [
+       2204,
+       633.3,
+       667.1
+      ],
+      [
+       2221,
+       630.4,
+       652.4
+      ],
+      [
+       2237,
+       626.8,
+       636.6
+      ],
+      [
+       2254,
+       622.3,
+       619.8
+      ],
+      [
+       2274,
+       617.1,
+       602
+      ],
+      [
+       2294,
+       611,
+       583.4
+      ],
+      [
+       2315,
+       604.1,
+       564.1
+      ],
+      [
+       2337,
+       596.3,
+       544.3
+      ],
+      [
+       2370,
+       587.7,
+       524.1
+      ],
+      [
+       2388,
+       578.3,
+       503.6
+      ],
+      [
+       2404,
+       568.3,
+       483
+      ],
+      [
+       2421,
+       557.6,
+       462.5
+      ],
+      [
+       2438,
+       546.5,
+       442.3
+      ],
+      [
+       2458,
+       535.1,
+       422.4
+      ],
+      [
+       2487,
+       523.4,
+       403
+      ],
+      [
+       2504,
+       511.7,
+       384.2
+      ],
+      [
+       2521,
+       500,
+       366.3
+      ],
+      [
+       2541,
+       488.4,
+       349.2
+      ],
+      [
+       2561,
+       477.2,
+       333.1
+      ],
+      [
+       2587,
+       466.3,
+       318
+      ],
+      [
+       2604,
+       456,
+       304
+      ],
+      [
+       2624,
+       446.2,
+       291.1
+      ],
+      [
+       2644,
+       437.1,
+       279.3
+      ],
+      [
+       2664,
+       428.7,
+       268.7
+      ],
+      [
+       2686,
+       421.1,
+       259.2
+      ],
+      [
+       2705,
+       414.2,
+       250.8
+      ],
+      [
+       2737,
+       408.1,
+       243.5
+      ],
+      [
+       2754,
+       402.8,
+       237.2
+      ],
+      [
+       2770,
+       398.3,
+       231.9
+      ],
+      [
+       2804,
+       394.5,
+       227.6
+      ],
+      [
+       2821,
+       391.5,
+       224
+      ],
+      [
+       2837,
+       389.1,
+       221.3
+      ],
+      [
+       2853,
+       387.3,
+       219.3
+      ],
+      [
+       2870,
+       386,
+       217.8
+      ],
+      [
+       2891,
+       385.2,
+       216.9
+      ],
+      [
+       2911,
+       384.8,
+       216.5
+      ],
+      [
+       2932,
+       384.7,
+       216.3
+      ],
+      [
+       2953,
+       384.6,
+       216.3
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 4051,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the unselected cohort remains on the established checkout"
+    },
+    {
+     "t": 4963,
+     "kind": "shot",
+     "label": "unselected-cohort-excluded"
+    }
+   ],
+   "net": [
+    {
+     "t": 411,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 431,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 538,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 658,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 777,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 898,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1019,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1140,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1259,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1379,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1499,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1619,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1742,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1861,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1979,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2100,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2219,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2339,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2460,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2578,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2699,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2818,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2937,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3058,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3181,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3299,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3338,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3419,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3539,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3662,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3778,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3903,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4019,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4138,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4260,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4379,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4499,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4618,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4738,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4857,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4980,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "unselected cohort reviewer",
+     "video": "videos/02a-unselected-cohort.webm",
+     "startedAt": 77
+    }
+   ]
+  },
+  "02b-sticky-expansion": {
+   "t0": 1788493552597,
+   "events": [
+    {
+     "t": 317,
+     "kind": "nav",
+     "label": "the reviewer opens an existing 25 percent rollout"
+    },
+    {
+     "t": 1734,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the original cohort is already included"
+    },
+    {
+     "t": 2645,
+     "kind": "shot",
+     "label": "original-cohort-before-expansion"
+    },
+    {
+     "t": 4013,
+     "kind": "tap",
+     "x": 384.640625,
+     "y": 216.265625,
+     "label": "the reviewer checks the next cohort before expanding",
+     "path": [
+      [
+       2693,
+       640,
+       752
+      ],
+      [
+       2709,
+       639.8,
+       751.8
+      ],
+      [
+       2725,
+       639.3,
+       751.4
+      ],
+      [
+       2752,
+       638.3,
+       750.6
+      ],
+      [
+       2764,
+       636.8,
+       749.3
+      ],
+      [
+       2783,
+       634.6,
+       747.4
+      ],
+      [
+       2806,
+       631.8,
+       744.9
+      ],
+      [
+       2826,
+       628.2,
+       741.6
+      ],
+      [
+       2859,
+       623.8,
+       737.5
+      ],
+      [
+       2876,
+       618.6,
+       732.6
+      ],
+      [
+       2893,
+       612.6,
+       726.6
+      ],
+      [
+       2909,
+       605.9,
+       719.6
+      ],
+      [
+       2929,
+       598.4,
+       711.5
+      ],
+      [
+       2950,
+       590.3,
+       702.2
+      ],
+      [
+       2976,
+       581.6,
+       691.8
+      ],
+      [
+       2992,
+       572.4,
+       680.1
+      ],
+      [
+       3012,
+       562.8,
+       667.1
+      ],
+      [
+       3031,
+       552.8,
+       652.9
+      ],
+      [
+       3053,
+       542.6,
+       637.5
+      ],
+      [
+       3072,
+       532.3,
+       620.9
+      ],
+      [
+       3094,
+       521.9,
+       603.3
+      ],
+      [
+       3113,
+       511.6,
+       584.7
+      ],
+      [
+       3135,
+       501.4,
+       565.2
+      ],
+      [
+       3154,
+       491.4,
+       545
+      ],
+      [
+       3193,
+       481.8,
+       524.3
+      ],
+      [
+       3210,
+       472.4,
+       503.1
+      ],
+      [
+       3226,
+       463.5,
+       481.8
+      ],
+      [
+       3242,
+       455.1,
+       460.5
+      ],
+      [
+       3259,
+       447.1,
+       439.3
+      ],
+      [
+       3278,
+       439.7,
+       418.5
+      ],
+      [
+       3300,
+       432.8,
+       398.3
+      ],
+      [
+       3325,
+       426.5,
+       378.7
+      ],
+      [
+       3342,
+       420.7,
+       360
+      ],
+      [
+       3361,
+       415.4,
+       342.2
+      ],
+      [
+       3381,
+       410.7,
+       325.5
+      ],
+      [
+       3403,
+       406.5,
+       310
+      ],
+      [
+       3422,
+       402.8,
+       295.7
+      ],
+      [
+       3444,
+       399.5,
+       282.6
+      ],
+      [
+       3464,
+       396.6,
+       270.9
+      ],
+      [
+       3485,
+       394.2,
+       260.4
+      ],
+      [
+       3505,
+       392.1,
+       251.2
+      ],
+      [
+       3543,
+       390.3,
+       243.2
+      ],
+      [
+       3560,
+       388.8,
+       236.5
+      ],
+      [
+       3576,
+       387.6,
+       230.8
+      ],
+      [
+       3593,
+       386.7,
+       226.3
+      ],
+      [
+       3609,
+       386,
+       222.8
+      ],
+      [
+       3642,
+       385.4,
+       220.1
+      ],
+      [
+       3659,
+       385,
+       218.3
+      ],
+      [
+       3675,
+       384.8,
+       217.2
+      ],
+      [
+       3693,
+       384.7,
+       216.5
+      ],
+      [
+       3709,
+       384.6,
+       216.3
+      ],
+      [
+       3732,
+       384.6,
+       216.3
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 4813,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the next cohort is initially excluded"
+    },
+    {
+     "t": 5719,
+     "kind": "shot",
+     "label": "next-cohort-before-expansion"
+    },
+    {
+     "t": 7033,
+     "kind": "tap",
+     "x": 896.3828125,
+     "y": 225.3515625,
+     "label": "the reviewer expands the same rollout to 50 percent",
+     "path": [
+      [
+       5759,
+       384.7,
+       216.3
+      ],
+      [
+       5776,
+       384.9,
+       216.2
+      ],
+      [
+       5792,
+       385.4,
+       215.9
+      ],
+      [
+       5809,
+       386.4,
+       215.5
+      ],
+      [
+       5828,
+       388,
+       214.9
+      ],
+      [
+       5859,
+       390.2,
+       214
+      ],
+      [
+       5876,
+       393.3,
+       212.8
+      ],
+      [
+       5893,
+       397.2,
+       211.3
+      ],
+      [
+       5909,
+       402,
+       209.5
+      ],
+      [
+       5927,
+       407.9,
+       207.5
+      ],
+      [
+       5946,
+       414.8,
+       205.3
+      ],
+      [
+       5976,
+       422.8,
+       202.9
+      ],
+      [
+       5992,
+       431.9,
+       200.3
+      ],
+      [
+       6008,
+       442.2,
+       197.8
+      ],
+      [
+       6026,
+       453.6,
+       195.2
+      ],
+      [
+       6045,
+       466.2,
+       192.7
+      ],
+      [
+       6065,
+       479.9,
+       190.3
+      ],
+      [
+       6093,
+       494.6,
+       188.2
+      ],
+      [
+       6109,
+       510.5,
+       186.3
+      ],
+      [
+       6126,
+       527.2,
+       184.8
+      ],
+      [
+       6159,
+       544.8,
+       183.6
+      ],
+      [
+       6176,
+       563.2,
+       182.8
+      ],
+      [
+       6192,
+       582.1,
+       182.5
+      ],
+      [
+       6209,
+       601.5,
+       182.6
+      ],
+      [
+       6226,
+       621.3,
+       183.1
+      ],
+      [
+       6242,
+       641.2,
+       184
+      ],
+      [
+       6276,
+       661,
+       185.3
+      ],
+      [
+       6293,
+       680.8,
+       187
+      ],
+      [
+       6309,
+       700.2,
+       188.9
+      ],
+      [
+       6326,
+       719.1,
+       191.1
+      ],
+      [
+       6343,
+       737.3,
+       193.5
+      ],
+      [
+       6376,
+       754.9,
+       196.1
+      ],
+      [
+       6393,
+       771.6,
+       198.7
+      ],
+      [
+       6409,
+       787.3,
+       201.4
+      ],
+      [
+       6426,
+       802,
+       204.1
+      ],
+      [
+       6443,
+       815.6,
+       206.8
+      ],
+      [
+       6459,
+       828.1,
+       209.3
+      ],
+      [
+       6493,
+       839.4,
+       211.7
+      ],
+      [
+       6509,
+       849.6,
+       214
+      ],
+      [
+       6525,
+       858.7,
+       216
+      ],
+      [
+       6542,
+       866.6,
+       217.9
+      ],
+      [
+       6559,
+       873.4,
+       219.5
+      ],
+      [
+       6592,
+       879.2,
+       220.9
+      ],
+      [
+       6609,
+       884,
+       222.2
+      ],
+      [
+       6626,
+       887.8,
+       223.1
+      ],
+      [
+       6643,
+       890.9,
+       223.9
+      ],
+      [
+       6660,
+       893.1,
+       224.5
+      ],
+      [
+       6676,
+       894.6,
+       224.9
+      ],
+      [
+       6709,
+       895.6,
+       225.2
+      ],
+      [
+       6725,
+       896.2,
+       225.3
+      ],
+      [
+       6742,
+       896.4,
+       225.3
+      ],
+      [
+       6759,
+       896.4,
+       225.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 7837,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the expansion cohort joins at 50 percent"
+    },
+    {
+     "t": 8710,
+     "kind": "shot",
+     "label": "next-cohort-admitted"
+    },
+    {
+     "t": 10123,
+     "kind": "tap",
+     "x": 171.2109375,
+     "y": 216.265625,
+     "label": "the reviewer rechecks the original cohort",
+     "path": [
+      [
+       8741,
+       896.3,
+       225.3
+      ],
+      [
+       8759,
+       896.1,
+       225.2
+      ],
+      [
+       8776,
+       895.3,
+       224.9
+      ],
+      [
+       8795,
+       893.9,
+       224.2
+      ],
+      [
+       8818,
+       891.7,
+       223.2
+      ],
+      [
+       8841,
+       888.6,
+       221.8
+      ],
+      [
+       8861,
+       884.3,
+       219.9
+      ],
+      [
+       8882,
+       878.8,
+       217.6
+      ],
+      [
+       8905,
+       872,
+       214.8
+      ],
+      [
+       8925,
+       863.8,
+       211.6
+      ],
+      [
+       8960,
+       854.2,
+       208
+      ],
+      [
+       8975,
+       843,
+       204.2
+      ],
+      [
+       8992,
+       830.2,
+       200.1
+      ],
+      [
+       9026,
+       815.7,
+       195.8
+      ],
+      [
+       9042,
+       799.7,
+       191.6
+      ],
+      [
+       9059,
+       782,
+       187.4
+      ],
+      [
+       9092,
+       762.7,
+       183.4
+      ],
+      [
+       9108,
+       741.8,
+       179.6
+      ],
+      [
+       9126,
+       719.5,
+       176.2
+      ],
+      [
+       9143,
+       695.8,
+       173.2
+      ],
+      [
+       9165,
+       670.9,
+       170.7
+      ],
+      [
+       9187,
+       645,
+       168.8
+      ],
+      [
+       9209,
+       618.2,
+       167.5
+      ],
+      [
+       9230,
+       590.7,
+       166.8
+      ],
+      [
+       9253,
+       562.7,
+       166.6
+      ],
+      [
+       9274,
+       534.5,
+       167.1
+      ],
+      [
+       9309,
+       506.3,
+       168.1
+      ],
+      [
+       9326,
+       478.3,
+       169.7
+      ],
+      [
+       9342,
+       450.7,
+       171.7
+      ],
+      [
+       9361,
+       423.8,
+       174.1
+      ],
+      [
+       9383,
+       397.8,
+       176.8
+      ],
+      [
+       9406,
+       372.9,
+       179.7
+      ],
+      [
+       9443,
+       349.1,
+       182.9
+      ],
+      [
+       9458,
+       326.7,
+       186.1
+      ],
+      [
+       9475,
+       305.8,
+       189.4
+      ],
+      [
+       9492,
+       286.4,
+       192.7
+      ],
+      [
+       9526,
+       268.6,
+       195.8
+      ],
+      [
+       9545,
+       252.5,
+       198.8
+      ],
+      [
+       9559,
+       237.9,
+       201.7
+      ],
+      [
+       9592,
+       225,
+       204.3
+      ],
+      [
+       9608,
+       213.8,
+       206.7
+      ],
+      [
+       9626,
+       204,
+       208.8
+      ],
+      [
+       9659,
+       195.8,
+       210.6
+      ],
+      [
+       9675,
+       188.9,
+       212.1
+      ],
+      [
+       9692,
+       183.4,
+       213.4
+      ],
+      [
+       9725,
+       179.1,
+       214.4
+      ],
+      [
+       9741,
+       175.9,
+       215.2
+      ],
+      [
+       9759,
+       173.7,
+       215.7
+      ],
+      [
+       9775,
+       172.3,
+       216
+      ],
+      [
+       9795,
+       171.5,
+       216.2
+      ],
+      [
+       9825,
+       171.3,
+       216.3
+      ],
+      [
+       9842,
+       171.2,
+       216.3
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 10919,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the original cohort remains included after the ramp grows"
+    },
+    {
+     "t": 11802,
+     "kind": "shot",
+     "label": "original-cohort-retained"
+    }
+   ],
+   "net": [
+    {
+     "t": 304,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 408,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 437,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 557,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 679,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 800,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 918,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1038,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1158,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1278,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1398,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1518,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1637,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1756,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1879,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1996,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2117,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2237,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2357,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2476,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2644,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2716,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2836,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2955,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3076,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3196,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3317,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3437,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3556,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3676,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3796,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3917,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4037,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4109,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4156,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4276,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4396,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4517,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4639,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4756,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4878,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4998,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5117,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5237,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5357,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5477,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5596,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5718,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5836,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5957,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6076,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6196,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6316,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6436,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6556,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6677,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6796,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6916,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7037,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7138,
+     "method": "POST",
+     "url": "/api/rollout",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7139,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7156,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7276,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7397,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7517,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7636,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7756,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7877,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7997,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8116,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8237,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8357,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8478,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8596,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8715,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8836,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8955,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9076,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9197,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9317,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9436,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9556,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9676,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9796,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9917,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10037,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10156,
+     "method": "GET",
+     "url": "/api/state?account=account-0",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10216,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10276,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10395,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10515,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10636,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10758,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10876,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10997,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11118,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11237,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11357,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11477,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11597,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11718,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11836,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "expansion reviewer",
+     "video": "videos/02b-sticky-expansion.webm",
+     "startedAt": 254
+    }
+   ]
+  },
+  "03-kill-switch": {
+   "t0": 1788493564514,
+   "events": [
+    {
+     "t": 901,
+     "kind": "nav",
+     "label": "the incident commander opens release controls"
+    },
+    {
+     "t": 3747,
+     "kind": "tap",
+     "x": 963.4921875,
+     "y": 225.3515625,
+     "label": "the feature is released to every account",
+     "path": [
+      [
+       2408,
+       640,
+       752
+      ],
+      [
+       2426,
+       640.1,
+       751.7
+      ],
+      [
+       2446,
+       640.3,
+       751.1
+      ],
+      [
+       2474,
+       640.8,
+       750
+      ],
+      [
+       2535,
+       641.4,
+       748.2
+      ],
+      [
+       2541,
+       642.4,
+       745.6
+      ],
+      [
+       2558,
+       643.8,
+       742.2
+      ],
+      [
+       2574,
+       645.5,
+       737.7
+      ],
+      [
+       2592,
+       647.7,
+       732.3
+      ],
+      [
+       2608,
+       650.5,
+       725.7
+      ],
+      [
+       2624,
+       653.7,
+       718
+      ],
+      [
+       2641,
+       657.6,
+       709.1
+      ],
+      [
+       2658,
+       662.1,
+       699
+      ],
+      [
+       2675,
+       667.3,
+       687.7
+      ],
+      [
+       2695,
+       673.3,
+       675.3
+      ],
+      [
+       2725,
+       679.9,
+       661.6
+      ],
+      [
+       2741,
+       687.4,
+       646.8
+      ],
+      [
+       2758,
+       695.6,
+       631
+      ],
+      [
+       2779,
+       704.6,
+       614.2
+      ],
+      [
+       2800,
+       714.4,
+       596.5
+      ],
+      [
+       2825,
+       724.8,
+       578
+      ],
+      [
+       2842,
+       735.9,
+       558.8
+      ],
+      [
+       2862,
+       747.6,
+       539.1
+      ],
+      [
+       2884,
+       759.7,
+       519.1
+      ],
+      [
+       2908,
+       772.3,
+       498.8
+      ],
+      [
+       2942,
+       785.1,
+       478.5
+      ],
+      [
+       2957,
+       798.1,
+       458.2
+      ],
+      [
+       2974,
+       811.2,
+       438.3
+      ],
+      [
+       2990,
+       824.2,
+       418.8
+      ],
+      [
+       3025,
+       837,
+       399.8
+      ],
+      [
+       3042,
+       849.5,
+       381.5
+      ],
+      [
+       3058,
+       861.7,
+       364
+      ],
+      [
+       3074,
+       873.3,
+       347.5
+      ],
+      [
+       3107,
+       884.4,
+       331.9
+      ],
+      [
+       3124,
+       894.8,
+       317.4
+      ],
+      [
+       3141,
+       904.5,
+       304
+      ],
+      [
+       3158,
+       913.5,
+       291.8
+      ],
+      [
+       3174,
+       921.6,
+       280.7
+      ],
+      [
+       3208,
+       929,
+       270.7
+      ],
+      [
+       3224,
+       935.6,
+       261.9
+      ],
+      [
+       3240,
+       941.4,
+       254.2
+      ],
+      [
+       3258,
+       946.5,
+       247.6
+      ],
+      [
+       3280,
+       950.7,
+       242
+      ],
+      [
+       3298,
+       954.3,
+       237.3
+      ],
+      [
+       3323,
+       957.1,
+       233.6
+      ],
+      [
+       3341,
+       959.4,
+       230.7
+      ],
+      [
+       3361,
+       961,
+       228.5
+      ],
+      [
+       3383,
+       962.2,
+       227
+      ],
+      [
+       3403,
+       962.9,
+       226.1
+      ],
+      [
+       3424,
+       963.3,
+       225.6
+      ],
+      [
+       3445,
+       963.5,
+       225.4
+      ],
+      [
+       3466,
+       963.5,
+       225.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 4548,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the feature is visible during a 100 percent rollout"
+    },
+    {
+     "t": 5447,
+     "kind": "shot",
+     "label": "before-kill-switch"
+    },
+    {
+     "t": 6570,
+     "kind": "tap",
+     "x": 823.84375,
+     "y": 340.5859375,
+     "label": "the incident commander engages the kill switch",
+     "path": [
+      [
+       5474,
+       963.5,
+       225.4
+      ],
+      [
+       5491,
+       963.4,
+       225.4
+      ],
+      [
+       5506,
+       963.2,
+       225.5
+      ],
+      [
+       5523,
+       962.8,
+       225.6
+      ],
+      [
+       5540,
+       962.1,
+       225.9
+      ],
+      [
+       5557,
+       961.2,
+       226.2
+      ],
+      [
+       5574,
+       960,
+       226.7
+      ],
+      [
+       5591,
+       958.4,
+       227.4
+      ],
+      [
+       5607,
+       956.5,
+       228.2
+      ],
+      [
+       5624,
+       954.3,
+       229.3
+      ],
+      [
+       5640,
+       951.6,
+       230.5
+      ],
+      [
+       5657,
+       948.6,
+       232
+      ],
+      [
+       5674,
+       945.2,
+       233.8
+      ],
+      [
+       5691,
+       941.5,
+       235.9
+      ],
+      [
+       5707,
+       937.4,
+       238.2
+      ],
+      [
+       5724,
+       933,
+       240.9
+      ],
+      [
+       5740,
+       928.3,
+       243.9
+      ],
+      [
+       5757,
+       923.3,
+       247.2
+      ],
+      [
+       5774,
+       918.1,
+       250.8
+      ],
+      [
+       5791,
+       912.7,
+       254.8
+      ],
+      [
+       5808,
+       907.2,
+       259
+      ],
+      [
+       5825,
+       901.5,
+       263.4
+      ],
+      [
+       5840,
+       895.9,
+       268.1
+      ],
+      [
+       5857,
+       890.2,
+       272.9
+      ],
+      [
+       5873,
+       884.6,
+       277.8
+      ],
+      [
+       5891,
+       879,
+       282.8
+      ],
+      [
+       5907,
+       873.6,
+       287.8
+      ],
+      [
+       5923,
+       868.4,
+       292.8
+      ],
+      [
+       5940,
+       863.4,
+       297.6
+      ],
+      [
+       5957,
+       858.7,
+       302.3
+      ],
+      [
+       5974,
+       854.3,
+       306.9
+      ],
+      [
+       5991,
+       850.1,
+       311.2
+      ],
+      [
+       6007,
+       846.3,
+       315.3
+      ],
+      [
+       6023,
+       842.8,
+       319
+      ],
+      [
+       6040,
+       839.6,
+       322.5
+      ],
+      [
+       6057,
+       836.8,
+       325.7
+      ],
+      [
+       6074,
+       834.2,
+       328.5
+      ],
+      [
+       6091,
+       832.1,
+       331
+      ],
+      [
+       6107,
+       830.2,
+       333.2
+      ],
+      [
+       6124,
+       828.6,
+       335
+      ],
+      [
+       6140,
+       827.3,
+       336.5
+      ],
+      [
+       6157,
+       826.2,
+       337.8
+      ],
+      [
+       6173,
+       825.4,
+       338.8
+      ],
+      [
+       6191,
+       824.7,
+       339.5
+      ],
+      [
+       6207,
+       824.3,
+       340
+      ],
+      [
+       6267,
+       824.1,
+       340.3
+      ],
+      [
+       6274,
+       823.9,
+       340.5
+      ],
+      [
+       6291,
+       823.9,
+       340.6
+      ],
+      [
+       6307,
+       823.8,
+       340.6
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 7371,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the new checkout disappears immediately"
+    },
+    {
+     "t": 7372,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the safe checkout replaces it"
+    },
+    {
+     "t": 7374,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the SDK reports the disabled reason at revision 3"
+    },
+    {
+     "t": 7375,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "OpenFeature also reports the disabled result"
+    },
+    {
+     "t": 8260,
+     "kind": "shot",
+     "label": "kill-switch-active"
+    }
+   ],
+   "net": [
+    {
+     "t": 890,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 962,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1022,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1141,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1261,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1383,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1513,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1623,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1742,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1862,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1982,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2102,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2221,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2368,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2460,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2581,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2699,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2820,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2940,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3060,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3179,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3300,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3419,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3539,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3660,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3780,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3850,
+     "method": "POST",
+     "url": "/api/rollout",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3850,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3899,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4019,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4139,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4259,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4380,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4500,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4620,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4738,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4858,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4980,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5099,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5220,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5339,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5458,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5578,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5699,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5820,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5939,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6059,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6180,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6300,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6419,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6540,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6659,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6675,
+     "method": "POST",
+     "url": "/api/enabled",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6766,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6786,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6900,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7019,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7140,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7260,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7379,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7500,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7620,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7740,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7859,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7979,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8099,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8260,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "incident commander",
+     "video": "videos/03-kill-switch.webm",
+     "startedAt": 557
+    }
+   ]
+  },
+  "04-persistence": {
+   "t0": 1788493572940,
+   "events": [
+    {
+     "t": 539,
+     "kind": "nav",
+     "label": "the operator prepares a persisted rollout"
+    },
+    {
+     "t": 3306,
+     "kind": "tap",
+     "x": 896.3828125,
+     "y": 225.3515625,
+     "label": "the operator publishes a 50 percent rollout",
+     "path": [
+      [
+       1994,
+       640,
+       752
+      ],
+      [
+       2017,
+       640,
+       751.7
+      ],
+      [
+       2027,
+       639.9,
+       751
+      ],
+      [
+       2043,
+       639.9,
+       749.7
+      ],
+      [
+       2064,
+       639.8,
+       747.7
+      ],
+      [
+       2083,
+       639.7,
+       744.8
+      ],
+      [
+       2110,
+       639.6,
+       740.9
+      ],
+      [
+       2127,
+       639.5,
+       735.9
+      ],
+      [
+       2145,
+       639.5,
+       729.8
+      ],
+      [
+       2167,
+       639.6,
+       722.4
+      ],
+      [
+       2186,
+       640,
+       713.9
+      ],
+      [
+       2208,
+       640.6,
+       704.1
+      ],
+      [
+       2227,
+       641.7,
+       693
+      ],
+      [
+       2248,
+       643.2,
+       680.8
+      ],
+      [
+       2269,
+       645.2,
+       667.3
+      ],
+      [
+       2289,
+       647.9,
+       652.7
+      ],
+      [
+       2310,
+       651.4,
+       637
+      ],
+      [
+       2331,
+       655.7,
+       620.3
+      ],
+      [
+       2360,
+       660.8,
+       602.7
+      ],
+      [
+       2377,
+       666.7,
+       584.3
+      ],
+      [
+       2393,
+       673.6,
+       565.3
+      ],
+      [
+       2412,
+       681.4,
+       545.7
+      ],
+      [
+       2433,
+       690,
+       525.8
+      ],
+      [
+       2453,
+       699.4,
+       505.6
+      ],
+      [
+       2477,
+       709.5,
+       485.4
+      ],
+      [
+       2494,
+       720.2,
+       465.3
+      ],
+      [
+       2515,
+       731.4,
+       445.4
+      ],
+      [
+       2536,
+       742.9,
+       425.9
+      ],
+      [
+       2556,
+       754.8,
+       407
+      ],
+      [
+       2576,
+       766.7,
+       388.7
+      ],
+      [
+       2610,
+       778.6,
+       371.1
+      ],
+      [
+       2626,
+       790.3,
+       354.5
+      ],
+      [
+       2643,
+       801.8,
+       338.7
+      ],
+      [
+       2659,
+       812.8,
+       324
+      ],
+      [
+       2679,
+       823.4,
+       310.4
+      ],
+      [
+       2698,
+       833.4,
+       297.9
+      ],
+      [
+       2727,
+       842.7,
+       286.5
+      ],
+      [
+       2743,
+       851.3,
+       276.2
+      ],
+      [
+       2760,
+       859.1,
+       267
+      ],
+      [
+       2781,
+       866.1,
+       258.8
+      ],
+      [
+       2801,
+       872.3,
+       251.7
+      ],
+      [
+       2827,
+       877.8,
+       245.7
+      ],
+      [
+       2844,
+       882.4,
+       240.5
+      ],
+      [
+       2876,
+       886.3,
+       236.3
+      ],
+      [
+       2893,
+       889.4,
+       232.9
+      ],
+      [
+       2910,
+       891.8,
+       230.2
+      ],
+      [
+       2927,
+       893.7,
+       228.2
+      ],
+      [
+       2960,
+       895,
+       226.9
+      ],
+      [
+       2977,
+       895.8,
+       226
+      ],
+      [
+       2993,
+       896.2,
+       225.6
+      ],
+      [
+       3010,
+       896.4,
+       225.4
+      ],
+      [
+       3028,
+       896.4,
+       225.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 4107,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "revision 2 serves the selected cohort before restart"
+    },
+    {
+     "t": 4985,
+     "kind": "shot",
+     "label": "before-control-plane-restart"
+    },
+    {
+     "t": 6137,
+     "kind": "tap",
+     "x": 833.578125,
+     "y": 437.8203125,
+     "label": "the operator restarts the entire control plane",
+     "path": [
+      [
+       5027,
+       896.4,
+       225.4
+      ],
+      [
+       5043,
+       896.3,
+       225.4
+      ],
+      [
+       5059,
+       896.1,
+       225.6
+      ],
+      [
+       5077,
+       895.8,
+       226
+      ],
+      [
+       5093,
+       895.3,
+       226.5
+      ],
+      [
+       5110,
+       894.5,
+       227.3
+      ],
+      [
+       5127,
+       893.5,
+       228.4
+      ],
+      [
+       5143,
+       892.2,
+       229.7
+      ],
+      [
+       5160,
+       890.7,
+       231.5
+      ],
+      [
+       5177,
+       888.9,
+       233.6
+      ],
+      [
+       5193,
+       886.9,
+       236.1
+      ],
+      [
+       5210,
+       884.6,
+       239
+      ],
+      [
+       5227,
+       882.1,
+       242.3
+      ],
+      [
+       5244,
+       879.5,
+       246.2
+      ],
+      [
+       5259,
+       876.7,
+       250.5
+      ],
+      [
+       5277,
+       873.8,
+       255.3
+      ],
+      [
+       5293,
+       870.8,
+       260.5
+      ],
+      [
+       5310,
+       867.7,
+       266.3
+      ],
+      [
+       5327,
+       864.7,
+       272.5
+      ],
+      [
+       5344,
+       861.7,
+       279.2
+      ],
+      [
+       5360,
+       858.8,
+       286.3
+      ],
+      [
+       5377,
+       856,
+       293.7
+      ],
+      [
+       5393,
+       853.4,
+       301.5
+      ],
+      [
+       5410,
+       850.9,
+       309.5
+      ],
+      [
+       5427,
+       848.5,
+       317.7
+      ],
+      [
+       5443,
+       846.4,
+       326.1
+      ],
+      [
+       5460,
+       844.4,
+       334.5
+      ],
+      [
+       5477,
+       842.6,
+       342.9
+      ],
+      [
+       5493,
+       841,
+       351.2
+      ],
+      [
+       5510,
+       839.7,
+       359.3
+      ],
+      [
+       5527,
+       838.5,
+       367.2
+      ],
+      [
+       5543,
+       837.5,
+       374.9
+      ],
+      [
+       5560,
+       836.6,
+       382.2
+      ],
+      [
+       5577,
+       835.9,
+       389.1
+      ],
+      [
+       5593,
+       835.3,
+       395.6
+      ],
+      [
+       5610,
+       834.8,
+       401.6
+      ],
+      [
+       5627,
+       834.5,
+       407.1
+      ],
+      [
+       5643,
+       834.2,
+       412.2
+      ],
+      [
+       5660,
+       834,
+       416.7
+      ],
+      [
+       5677,
+       833.8,
+       420.8
+      ],
+      [
+       5693,
+       833.7,
+       424.4
+      ],
+      [
+       5710,
+       833.7,
+       427.4
+      ],
+      [
+       5727,
+       833.6,
+       430
+      ],
+      [
+       5743,
+       833.6,
+       432.2
+      ],
+      [
+       5760,
+       833.6,
+       434
+      ],
+      [
+       5777,
+       833.6,
+       435.3
+      ],
+      [
+       5793,
+       833.6,
+       436.3
+      ],
+      [
+       5810,
+       833.6,
+       437
+      ],
+      [
+       5827,
+       833.6,
+       437.5
+      ],
+      [
+       5844,
+       833.6,
+       437.7
+      ],
+      [
+       5859,
+       833.6,
+       437.8
+      ],
+      [
+       5877,
+       833.6,
+       437.8
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 6971,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the restarted control plane loads the same revision 2"
+    },
+    {
+     "t": 6974,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the account keeps the same assigned experience after restart"
+    },
+    {
+     "t": 6976,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the runtime reconnects to a healthy live source"
+    },
+    {
+     "t": 10748,
+     "kind": "shot",
+     "label": "persisted-after-restart"
+    }
+   ],
+   "net": [
+    {
+     "t": 532,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 584,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 661,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 779,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 900,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1021,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1140,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1260,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1382,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1501,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1620,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1741,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1860,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1979,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2100,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2220,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2341,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2460,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2580,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2700,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2820,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2940,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3060,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3181,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3301,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3408,
+     "method": "POST",
+     "url": "/api/rollout",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3410,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3422,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3540,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3660,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3780,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3900,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4024,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4141,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4261,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4381,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4501,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4622,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4741,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4861,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4985,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5100,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5220,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5340,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5460,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5579,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5700,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5820,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5940,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6060,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6181,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6236,
+     "method": "POST",
+     "url": "/api/restart",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6238,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6301,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6422,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6541,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6694,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6792,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6902,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7024,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7148,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7268,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7383,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7524,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8598,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8624,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8625,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8776,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9475,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9495,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9502,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9505,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10429,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10443,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10446,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10446,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10446,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10449,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10449,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10449,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10462,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10462,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10462,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10462,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10462,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10472,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10478,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10515,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10516,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10728,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10813,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10863,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10982,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 11111,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "platform operator",
+     "video": "videos/04-persistence.webm",
+     "startedAt": 212
+    }
+   ]
+  },
+  "05-outage-recovery": {
+   "t0": 1788493584832,
+   "events": [
+    {
+     "t": 1265,
+     "kind": "nav",
+     "label": "the engineer starts from a healthy consumer"
+    },
+    {
+     "t": 4106,
+     "kind": "tap",
+     "x": 963.4921875,
+     "y": 225.3515625,
+     "label": "the engineer releases the feature before simulating failure",
+     "path": [
+      [
+       2790,
+       640,
+       752
+      ],
+      [
+       2792,
+       640,
+       751.7
+      ],
+      [
+       2804,
+       640.1,
+       751
+      ],
+      [
+       2825,
+       640.3,
+       749.7
+      ],
+      [
+       2848,
+       640.6,
+       747.7
+      ],
+      [
+       2902,
+       641,
+       744.7
+      ],
+      [
+       2915,
+       641.6,
+       740.8
+      ],
+      [
+       2931,
+       642.4,
+       735.8
+      ],
+      [
+       2948,
+       643.5,
+       729.7
+      ],
+      [
+       2965,
+       645,
+       722.4
+      ],
+      [
+       2981,
+       646.8,
+       713.8
+      ],
+      [
+       2998,
+       649.2,
+       703.9
+      ],
+      [
+       3014,
+       652.1,
+       692.9
+      ],
+      [
+       3031,
+       655.6,
+       680.6
+      ],
+      [
+       3054,
+       659.9,
+       667.1
+      ],
+      [
+       3081,
+       664.9,
+       652.4
+      ],
+      [
+       3098,
+       670.8,
+       636.7
+      ],
+      [
+       3116,
+       677.6,
+       620
+      ],
+      [
+       3136,
+       685.4,
+       602.3
+      ],
+      [
+       3158,
+       694,
+       583.9
+      ],
+      [
+       3178,
+       703.6,
+       564.9
+      ],
+      [
+       3199,
+       714,
+       545.3
+      ],
+      [
+       3219,
+       725.3,
+       525.4
+      ],
+      [
+       3240,
+       737.3,
+       505.3
+      ],
+      [
+       3262,
+       749.9,
+       485
+      ],
+      [
+       3298,
+       763.1,
+       464.9
+      ],
+      [
+       3325,
+       776.7,
+       445.1
+      ],
+      [
+       3332,
+       790.5,
+       425.6
+      ],
+      [
+       3348,
+       804.5,
+       406.6
+      ],
+      [
+       3365,
+       818.4,
+       388.3
+      ],
+      [
+       3398,
+       832.2,
+       370.8
+      ],
+      [
+       3415,
+       845.6,
+       354.2
+      ],
+      [
+       3432,
+       858.7,
+       338.5
+      ],
+      [
+       3448,
+       871.2,
+       323.8
+      ],
+      [
+       3469,
+       883.1,
+       310.2
+      ],
+      [
+       3491,
+       894.2,
+       297.7
+      ],
+      [
+       3511,
+       904.6,
+       286.3
+      ],
+      [
+       3548,
+       914.1,
+       276
+      ],
+      [
+       3564,
+       922.7,
+       266.8
+      ],
+      [
+       3581,
+       930.4,
+       258.7
+      ],
+      [
+       3598,
+       937.3,
+       251.7
+      ],
+      [
+       3615,
+       943.2,
+       245.6
+      ],
+      [
+       3637,
+       948.3,
+       240.5
+      ],
+      [
+       3656,
+       952.5,
+       236.3
+      ],
+      [
+       3681,
+       955.9,
+       232.8
+      ],
+      [
+       3698,
+       958.6,
+       230.2
+      ],
+      [
+       3719,
+       960.6,
+       228.2
+      ],
+      [
+       3739,
+       961.9,
+       226.9
+      ],
+      [
+       3759,
+       962.8,
+       226
+      ],
+      [
+       3780,
+       963.3,
+       225.6
+      ],
+      [
+       3815,
+       963.5,
+       225.4
+      ],
+      [
+       3831,
+       963.5,
+       225.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 6062,
+     "kind": "tap",
+     "x": 985.0859375,
+     "y": 437.8203125,
+     "label": "the engineer stops the configuration source",
+     "path": [
+      [
+       4948,
+       963.5,
+       225.4
+      ],
+      [
+       4964,
+       963.6,
+       225.4
+      ],
+      [
+       4981,
+       963.7,
+       225.6
+      ],
+      [
+       4999,
+       964,
+       226
+      ],
+      [
+       5015,
+       964.5,
+       226.6
+      ],
+      [
+       5032,
+       965.2,
+       227.5
+      ],
+      [
+       5048,
+       966,
+       228.7
+      ],
+      [
+       5064,
+       967.1,
+       230.2
+      ],
+      [
+       5081,
+       968.4,
+       232.1
+      ],
+      [
+       5098,
+       969.9,
+       234.4
+      ],
+      [
+       5115,
+       971.6,
+       237.1
+      ],
+      [
+       5131,
+       973.5,
+       240.2
+      ],
+      [
+       5148,
+       975.5,
+       243.8
+      ],
+      [
+       5164,
+       977.6,
+       247.9
+      ],
+      [
+       5182,
+       979.7,
+       252.5
+      ],
+      [
+       5199,
+       981.9,
+       257.5
+      ],
+      [
+       5215,
+       984,
+       263
+      ],
+      [
+       5232,
+       986.1,
+       269
+      ],
+      [
+       5248,
+       988,
+       275.4
+      ],
+      [
+       5264,
+       989.8,
+       282.2
+      ],
+      [
+       5282,
+       991.4,
+       289.4
+      ],
+      [
+       5299,
+       992.9,
+       297
+      ],
+      [
+       5315,
+       994.1,
+       304.8
+      ],
+      [
+       5332,
+       995.1,
+       312.8
+      ],
+      [
+       5348,
+       995.8,
+       321.1
+      ],
+      [
+       5366,
+       996.3,
+       329.3
+      ],
+      [
+       5381,
+       996.6,
+       337.7
+      ],
+      [
+       5398,
+       996.6,
+       345.9
+      ],
+      [
+       5415,
+       996.5,
+       354.1
+      ],
+      [
+       5432,
+       996.2,
+       362.1
+      ],
+      [
+       5448,
+       995.7,
+       369.8
+      ],
+      [
+       5464,
+       995.1,
+       377.3
+      ],
+      [
+       5482,
+       994.4,
+       384.3
+      ],
+      [
+       5499,
+       993.6,
+       391
+      ],
+      [
+       5514,
+       992.8,
+       397.3
+      ],
+      [
+       5530,
+       991.9,
+       403.1
+      ],
+      [
+       5548,
+       991.1,
+       408.5
+      ],
+      [
+       5564,
+       990.2,
+       413.3
+      ],
+      [
+       5582,
+       989.4,
+       417.7
+      ],
+      [
+       5599,
+       988.7,
+       421.6
+      ],
+      [
+       5615,
+       988,
+       425
+      ],
+      [
+       5632,
+       987.4,
+       427.9
+      ],
+      [
+       5653,
+       986.8,
+       430.4
+      ],
+      [
+       5665,
+       986.3,
+       432.5
+      ],
+      [
+       5682,
+       986,
+       434.1
+      ],
+      [
+       5699,
+       985.7,
+       435.4
+      ],
+      [
+       5715,
+       985.4,
+       436.4
+      ],
+      [
+       5731,
+       985.3,
+       437.1
+      ],
+      [
+       5747,
+       985.2,
+       437.5
+      ],
+      [
+       5765,
+       985.1,
+       437.7
+      ],
+      [
+       5782,
+       985.1,
+       437.8
+      ],
+      [
+       5799,
+       985.1,
+       437.8
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 6863,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the runtime explicitly reports stale configuration"
+    },
+    {
+     "t": 6864,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the last valid new checkout remains active during the outage"
+    },
+    {
+     "t": 6865,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the active revision remains 2 instead of resetting"
+    },
+    {
+     "t": 6865,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "OpenFeature exposes the stale state"
+    },
+    {
+     "t": 7756,
+     "kind": "shot",
+     "label": "offline-last-good-active"
+    },
+    {
+     "t": 8775,
+     "kind": "tap",
+     "x": 1119.3046875,
+     "y": 437.8203125,
+     "label": "the engineer restores the configuration source",
+     "path": [
+      [
+       7797,
+       985.1,
+       437.8
+      ],
+      [
+       7814,
+       985.2,
+       437.8
+      ],
+      [
+       7831,
+       985.4,
+       437.8
+      ],
+      [
+       7847,
+       985.8,
+       437.7
+      ],
+      [
+       7863,
+       986.5,
+       437.5
+      ],
+      [
+       7881,
+       987.4,
+       437.4
+      ],
+      [
+       7897,
+       988.7,
+       437.2
+      ],
+      [
+       7913,
+       990.3,
+       436.9
+      ],
+      [
+       7930,
+       992.2,
+       436.6
+      ],
+      [
+       7947,
+       994.6,
+       436.2
+      ],
+      [
+       7964,
+       997.4,
+       435.8
+      ],
+      [
+       7981,
+       1000.6,
+       435.4
+      ],
+      [
+       7998,
+       1004.2,
+       435.1
+      ],
+      [
+       8014,
+       1008.3,
+       434.7
+      ],
+      [
+       8031,
+       1012.7,
+       434.3
+      ],
+      [
+       8047,
+       1017.5,
+       434
+      ],
+      [
+       8063,
+       1022.7,
+       433.8
+      ],
+      [
+       8081,
+       1028.2,
+       433.6
+      ],
+      [
+       8098,
+       1034,
+       433.4
+      ],
+      [
+       8115,
+       1039.9,
+       433.4
+      ],
+      [
+       8131,
+       1046,
+       433.4
+      ],
+      [
+       8147,
+       1052.2,
+       433.5
+      ],
+      [
+       8164,
+       1058.4,
+       433.6
+      ],
+      [
+       8180,
+       1064.5,
+       433.8
+      ],
+      [
+       8197,
+       1070.4,
+       434
+      ],
+      [
+       8214,
+       1076.2,
+       434.3
+      ],
+      [
+       8231,
+       1081.7,
+       434.6
+      ],
+      [
+       8247,
+       1086.8,
+       435
+      ],
+      [
+       8264,
+       1091.7,
+       435.3
+      ],
+      [
+       8281,
+       1096.1,
+       435.6
+      ],
+      [
+       8297,
+       1100.2,
+       436
+      ],
+      [
+       8314,
+       1103.8,
+       436.3
+      ],
+      [
+       8330,
+       1107,
+       436.6
+      ],
+      [
+       8348,
+       1109.8,
+       436.8
+      ],
+      [
+       8364,
+       1112.1,
+       437.1
+      ],
+      [
+       8381,
+       1114.1,
+       437.3
+      ],
+      [
+       8397,
+       1115.7,
+       437.4
+      ],
+      [
+       8414,
+       1117,
+       437.6
+      ],
+      [
+       8431,
+       1117.9,
+       437.7
+      ],
+      [
+       8447,
+       1118.6,
+       437.7
+      ],
+      [
+       8463,
+       1119,
+       437.8
+      ],
+      [
+       8481,
+       1119.2,
+       437.8
+      ],
+      [
+       8497,
+       1119.3,
+       437.8
+      ],
+      [
+       8514,
+       1119.3,
+       437.8
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 9572,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the runtime returns to a healthy connected state"
+    },
+    {
+     "t": 9573,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "recovery keeps revision 2 and the same feature value"
+    },
+    {
+     "t": 10454,
+     "kind": "shot",
+     "label": "source-recovered"
+    }
+   ],
+   "net": [
+    {
+     "t": 1258,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 1318,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1424,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1507,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1669,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1750,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1868,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1987,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2108,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2227,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2348,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2467,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2587,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2713,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2827,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2949,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3068,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3188,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3307,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3429,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3549,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3668,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3787,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3908,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4028,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4149,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4224,
+     "method": "POST",
+     "url": "/api/rollout",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4226,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4267,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4389,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4508,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4628,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4751,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4871,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4989,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5111,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5232,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5351,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5469,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5588,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5712,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5831,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5950,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6067,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6160,
+     "method": "POST",
+     "url": "/api/stop",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6162,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6188,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6309,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6429,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6548,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6668,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6788,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6908,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7028,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7149,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7268,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7387,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7508,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7629,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7755,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7866,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7986,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8108,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8227,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8346,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8466,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8586,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8708,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8830,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8882,
+     "method": "POST",
+     "url": "/api/start",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8885,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8946,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9067,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9187,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9307,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9429,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9548,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9668,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9788,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9907,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10028,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10148,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10268,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10453,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10507,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "reliability engineer",
+     "video": "videos/05-outage-recovery.webm",
+     "startedAt": 928
+    }
+   ]
+  },
+  "06-safety-boundaries": {
+   "t0": 1788493595387,
+   "events": [
+    {
+     "t": 410,
+     "kind": "nav",
+     "label": "the reviewer opens the safety controls"
+    },
+    {
+     "t": 2999,
+     "kind": "tap",
+     "x": 839.078125,
+     "y": 535.0546875,
+     "label": "the reviewer attempts a write with the runtime read key",
+     "path": [
+      [
+       1871,
+       640,
+       752
+      ],
+      [
+       1908,
+       640.1,
+       751.9
+      ],
+      [
+       1921,
+       640.2,
+       751.6
+      ],
+      [
+       1938,
+       640.4,
+       751
+      ],
+      [
+       1954,
+       640.8,
+       750.2
+      ],
+      [
+       1971,
+       641.4,
+       749
+      ],
+      [
+       1988,
+       642.2,
+       747.3
+      ],
+      [
+       2004,
+       643.3,
+       745.3
+      ],
+      [
+       2021,
+       644.6,
+       742.7
+      ],
+      [
+       2038,
+       646.2,
+       739.7
+      ],
+      [
+       2055,
+       648.1,
+       736.1
+      ],
+      [
+       2071,
+       650.4,
+       732
+      ],
+      [
+       2088,
+       653.1,
+       727.4
+      ],
+      [
+       2105,
+       656.3,
+       722.3
+      ],
+      [
+       2121,
+       659.8,
+       716.7
+      ],
+      [
+       2138,
+       663.9,
+       710.6
+      ],
+      [
+       2154,
+       668.4,
+       704.1
+      ],
+      [
+       2171,
+       673.4,
+       697.2
+      ],
+      [
+       2188,
+       678.9,
+       689.9
+      ],
+      [
+       2204,
+       684.8,
+       682.3
+      ],
+      [
+       2221,
+       691.2,
+       674.4
+      ],
+      [
+       2238,
+       698,
+       666.3
+      ],
+      [
+       2254,
+       705.2,
+       658.1
+      ],
+      [
+       2271,
+       712.6,
+       649.8
+      ],
+      [
+       2287,
+       720.4,
+       641.5
+      ],
+      [
+       2304,
+       728.3,
+       633.2
+      ],
+      [
+       2321,
+       736.3,
+       625
+      ],
+      [
+       2338,
+       744.4,
+       617
+      ],
+      [
+       2354,
+       752.4,
+       609.2
+      ],
+      [
+       2371,
+       760.4,
+       601.7
+      ],
+      [
+       2388,
+       768.1,
+       594.6
+      ],
+      [
+       2404,
+       775.7,
+       587.7
+      ],
+      [
+       2421,
+       782.9,
+       581.3
+      ],
+      [
+       2438,
+       789.8,
+       575.3
+      ],
+      [
+       2454,
+       796.2,
+       569.7
+      ],
+      [
+       2471,
+       802.3,
+       564.6
+      ],
+      [
+       2488,
+       807.9,
+       559.9
+      ],
+      [
+       2504,
+       813,
+       555.7
+      ],
+      [
+       2520,
+       817.6,
+       552
+      ],
+      [
+       2538,
+       821.7,
+       548.7
+      ],
+      [
+       2554,
+       825.3,
+       545.8
+      ],
+      [
+       2571,
+       828.4,
+       543.3
+      ],
+      [
+       2588,
+       831.1,
+       541.2
+      ],
+      [
+       2604,
+       833.3,
+       539.5
+      ],
+      [
+       2620,
+       835.1,
+       538.1
+      ],
+      [
+       2638,
+       836.5,
+       537
+      ],
+      [
+       2654,
+       837.5,
+       536.2
+      ],
+      [
+       2671,
+       838.3,
+       535.7
+      ],
+      [
+       2687,
+       838.7,
+       535.3
+      ],
+      [
+       2705,
+       839,
+       535.1
+      ],
+      [
+       2721,
+       839.1,
+       535.1
+      ],
+      [
+       2738,
+       839.1,
+       535.1
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 3796,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "a runtime read key cannot mutate configuration"
+    },
+    {
+     "t": 3797,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the rejected credential leaves revision 1 untouched"
+    },
+    {
+     "t": 4684,
+     "kind": "shot",
+     "label": "read-key-rejected"
+    },
+    {
+     "t": 5764,
+     "kind": "tap",
+     "x": 1013.90625,
+     "y": 535.0546875,
+     "label": "the reviewer submits a rollout whose weights total only 5000",
+     "path": [
+      [
+       4721,
+       839.1,
+       535.1
+      ],
+      [
+       4738,
+       839.2,
+       535.1
+      ],
+      [
+       4754,
+       839.4,
+       535.1
+      ],
+      [
+       4771,
+       839.8,
+       535.2
+      ],
+      [
+       4787,
+       840.5,
+       535.3
+      ],
+      [
+       4804,
+       841.5,
+       535.5
+      ],
+      [
+       4821,
+       842.7,
+       535.7
+      ],
+      [
+       4837,
+       844.4,
+       536
+      ],
+      [
+       4854,
+       846.4,
+       536.4
+      ],
+      [
+       4871,
+       848.9,
+       536.8
+      ],
+      [
+       4887,
+       851.8,
+       537.2
+      ],
+      [
+       4904,
+       855.1,
+       537.6
+      ],
+      [
+       4921,
+       858.9,
+       538.1
+      ],
+      [
+       4937,
+       863.2,
+       538.6
+      ],
+      [
+       4954,
+       867.9,
+       539
+      ],
+      [
+       4971,
+       873.1,
+       539.4
+      ],
+      [
+       4989,
+       878.7,
+       539.8
+      ],
+      [
+       5004,
+       884.7,
+       540.1
+      ],
+      [
+       5021,
+       891,
+       540.4
+      ],
+      [
+       5037,
+       897.7,
+       540.6
+      ],
+      [
+       5054,
+       904.7,
+       540.8
+      ],
+      [
+       5071,
+       911.8,
+       540.8
+      ],
+      [
+       5087,
+       919.1,
+       540.8
+      ],
+      [
+       5105,
+       926.5,
+       540.7
+      ],
+      [
+       5121,
+       933.9,
+       540.5
+      ],
+      [
+       5137,
+       941.1,
+       540.3
+      ],
+      [
+       5154,
+       948.3,
+       540
+      ],
+      [
+       5171,
+       955.3,
+       539.7
+      ],
+      [
+       5188,
+       961.9,
+       539.4
+      ],
+      [
+       5204,
+       968.3,
+       539
+      ],
+      [
+       5221,
+       974.3,
+       538.6
+      ],
+      [
+       5237,
+       979.9,
+       538.2
+      ],
+      [
+       5254,
+       985.1,
+       537.8
+      ],
+      [
+       5271,
+       989.8,
+       537.4
+      ],
+      [
+       5287,
+       994.1,
+       537
+      ],
+      [
+       5304,
+       997.9,
+       536.7
+      ],
+      [
+       5321,
+       1001.2,
+       536.4
+      ],
+      [
+       5338,
+       1004.1,
+       536.1
+      ],
+      [
+       5354,
+       1006.6,
+       535.8
+      ],
+      [
+       5371,
+       1008.6,
+       535.6
+      ],
+      [
+       5387,
+       1010.2,
+       535.5
+      ],
+      [
+       5404,
+       1011.5,
+       535.3
+      ],
+      [
+       5421,
+       1012.5,
+       535.2
+      ],
+      [
+       5437,
+       1013.2,
+       535.1
+      ],
+      [
+       5454,
+       1013.6,
+       535.1
+      ],
+      [
+       5471,
+       1013.8,
+       535.1
+      ],
+      [
+       5487,
+       1013.9,
+       535.1
+      ],
+      [
+       5503,
+       1013.9,
+       535.1
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 6562,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the malformed ruleset is rejected"
+    },
+    {
+     "t": 6564,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the invalid snapshot never replaces revision 1"
+    },
+    {
+     "t": 7448,
+     "kind": "shot",
+     "label": "invalid-ruleset-rejected"
+    },
+    {
+     "t": 8564,
+     "kind": "tap",
+     "x": 819.921875,
+     "y": 583.3515625,
+     "label": "the reviewer races two writers from the same revision",
+     "path": [
+      [
+       7470,
+       1013.9,
+       535.1
+      ],
+      [
+       7486,
+       1013.8,
+       535.1
+      ],
+      [
+       7503,
+       1013.6,
+       535.1
+      ],
+      [
+       7520,
+       1013.2,
+       535.1
+      ],
+      [
+       7536,
+       1012.5,
+       535.1
+      ],
+      [
+       7553,
+       1011.6,
+       535.1
+      ],
+      [
+       7569,
+       1010.3,
+       535.1
+      ],
+      [
+       7586,
+       1008.6,
+       535.1
+      ],
+      [
+       7603,
+       1006.6,
+       535.2
+      ],
+      [
+       7620,
+       1004.2,
+       535.3
+      ],
+      [
+       7636,
+       1001.3,
+       535.5
+      ],
+      [
+       7653,
+       998,
+       535.7
+      ],
+      [
+       7669,
+       994.2,
+       536
+      ],
+      [
+       7686,
+       990,
+       536.5
+      ],
+      [
+       7703,
+       985.4,
+       537
+      ],
+      [
+       7720,
+       980.2,
+       537.6
+      ],
+      [
+       7737,
+       974.7,
+       538.4
+      ],
+      [
+       7753,
+       968.7,
+       539.4
+      ],
+      [
+       7769,
+       962.4,
+       540.5
+      ],
+      [
+       7786,
+       955.7,
+       541.8
+      ],
+      [
+       7803,
+       948.7,
+       543.2
+      ],
+      [
+       7820,
+       941.5,
+       544.8
+      ],
+      [
+       7836,
+       934,
+       546.6
+      ],
+      [
+       7855,
+       926.5,
+       548.4
+      ],
+      [
+       7870,
+       918.8,
+       550.4
+      ],
+      [
+       7886,
+       911.2,
+       552.5
+      ],
+      [
+       7903,
+       903.5,
+       554.6
+      ],
+      [
+       7920,
+       896.1,
+       556.8
+      ],
+      [
+       7936,
+       888.7,
+       559.1
+      ],
+      [
+       7953,
+       881.7,
+       561.3
+      ],
+      [
+       7970,
+       874.9,
+       563.5
+      ],
+      [
+       7987,
+       868.4,
+       565.6
+      ],
+      [
+       8003,
+       862.3,
+       567.7
+      ],
+      [
+       8020,
+       856.6,
+       569.7
+      ],
+      [
+       8036,
+       851.3,
+       571.5
+      ],
+      [
+       8053,
+       846.4,
+       573.3
+      ],
+      [
+       8070,
+       842,
+       574.9
+      ],
+      [
+       8086,
+       838.1,
+       576.4
+      ],
+      [
+       8103,
+       834.6,
+       577.7
+      ],
+      [
+       8120,
+       831.5,
+       578.8
+      ],
+      [
+       8136,
+       828.8,
+       579.9
+      ],
+      [
+       8153,
+       826.6,
+       580.7
+      ],
+      [
+       8169,
+       824.7,
+       581.4
+      ],
+      [
+       8186,
+       823.2,
+       582
+      ],
+      [
+       8203,
+       822.1,
+       582.5
+      ],
+      [
+       8220,
+       821.2,
+       582.8
+      ],
+      [
+       8236,
+       820.6,
+       583.1
+      ],
+      [
+       8253,
+       820.2,
+       583.2
+      ],
+      [
+       8270,
+       820,
+       583.3
+      ],
+      [
+       8287,
+       819.9,
+       583.3
+      ],
+      [
+       8303,
+       819.9,
+       583.4
+      ]
+     ],
+     "cur": "pointer"
+    },
+    {
+     "t": 9363,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "exactly one concurrent writer succeeds and one conflicts"
+    },
+    {
+     "t": 9364,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the race produces one monotonic revision instead of a lost update"
+    },
+    {
+     "t": 9365,
+     "kind": "assert",
+     "status": "PASS",
+     "label": "the consumer remains usable after all rejected operations"
+    },
+    {
+     "t": 10246,
+     "kind": "shot",
+     "label": "concurrency-conflict-contained"
+    }
+   ],
+   "net": [
+    {
+     "t": 404,
+     "method": "GET",
+     "url": "/",
+     "status": 200,
+     "type": "document"
+    },
+    {
+     "t": 430,
+     "method": "GET",
+     "url": "/api/state?account=",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 532,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 652,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 773,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 893,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1014,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1133,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1253,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1373,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1492,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1612,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1733,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1852,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 1972,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2092,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2212,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2332,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2452,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2572,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2692,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2813,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 2932,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3052,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3105,
+     "method": "POST",
+     "url": "/api/read-key-write",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3106,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3172,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3292,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3413,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3533,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3653,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3773,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 3892,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4011,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4132,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4253,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4375,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4493,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4684,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4731,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4852,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 4973,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5091,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5212,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5332,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5451,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5572,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5692,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5813,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5860,
+     "method": "POST",
+     "url": "/api/invalid",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5861,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 5932,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6052,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6174,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6293,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6413,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6533,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6652,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6772,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 6892,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7012,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7132,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7253,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7373,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7492,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7611,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7733,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7852,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 7972,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8091,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8211,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8333,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8453,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8573,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8666,
+     "method": "POST",
+     "url": "/api/concurrency",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8667,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8691,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8812,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 8933,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9053,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9174,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9293,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9412,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9532,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9652,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9773,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 9892,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10013,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10133,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    },
+    {
+     "t": 10251,
+     "method": "GET",
+     "url": "/api/state?account=account-10",
+     "status": 200,
+     "type": "fetch"
+    }
+   ],
+   "tracks": [
+    {
+     "id": 0,
+     "label": "security reviewer",
+     "video": "videos/06-safety-boundaries.webm",
+     "startedAt": 87
+    }
+   ]
+  }
+ }
+}

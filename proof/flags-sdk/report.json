@@ -1,68 +1,288 @@
 {
-  "title": "CoDuck Flags SDK consumer proof",
-  "startedAt": "2026-09-04T02:44:24.487Z",
-  "finishedAt": "2026-09-04T02:44:24.955Z",
-  "scope": "Built SDK packages against the real embedded reference server over HTTP and SSE",
-  "limitations": [
-    "This is a headless library; there is no browser UI or screenshot claim.",
-    "This does not claim a CoDuck production integration, PR-environment application journey, npm publication, or multi-node control-plane availability."
+  "title": "CoDuck Flags SDK — live rollout journeys",
+  "base": "http://localhost:5001",
+  "generated": "2026-09-04",
+  "verdict": "PROVEN",
+  "pass": 38,
+  "fail": 0,
+  "journeys": [
+    {
+      "name": "01-live-rollout",
+      "promise": "A running application receives a percentage rollout live, without restarting or evaluating over the network.",
+      "pass": 8,
+      "fail": 0
+    },
+    {
+      "name": "02-sticky-exclusion",
+      "promise": "A percentage rollout includes an early cohort while a holdout remains excluded.",
+      "pass": 3,
+      "fail": 0
+    },
+    {
+      "name": "02a-unselected-cohort",
+      "promise": "An account outside the percentage boundary remains on the established experience.",
+      "pass": 1,
+      "fail": 0
+    },
+    {
+      "name": "02b-sticky-expansion",
+      "promise": "Expanding a rollout admits the next cohort without removing the original cohort.",
+      "pass": 4,
+      "fail": 0
+    },
+    {
+      "name": "03-kill-switch",
+      "promise": "The kill switch overrides even a 100% rollout immediately.",
+      "pass": 5,
+      "fail": 0
+    },
+    {
+      "name": "04-persistence",
+      "promise": "A published rollout survives a full control-plane restart.",
+      "pass": 4,
+      "fail": 0
+    },
+    {
+      "name": "05-outage-recovery",
+      "promise": "An outage marks configuration stale while the last valid value remains active, then recovers.",
+      "pass": 6,
+      "fail": 0
+    },
+    {
+      "name": "06-safety-boundaries",
+      "promise": "Read credentials, malformed rulesets, and stale concurrent writers cannot corrupt the active revision.",
+      "pass": 7,
+      "fail": 0
+    }
   ],
-  "passed": 9,
-  "failed": 0,
   "results": [
     {
-      "journey": "initial-state",
-      "step": "The consumer loads the current production-style snapshot",
-      "pass": true,
-      "note": "revision=1"
+      "journey": "01-live-rollout",
+      "step": "the running consumer starts on revision 1",
+      "status": "PASS",
+      "note": "revision 1"
     },
     {
-      "journey": "initial-state",
-      "step": "The feature is initially unavailable",
-      "pass": true,
-      "note": "defaultVariation=off"
+      "journey": "01-live-rollout",
+      "step": "the early-cohort account starts on the established checkout",
+      "status": "PASS",
+      "note": "caller default is false; configured variant is off"
     },
     {
-      "journey": "live-rollout",
-      "step": "A management SDK change reaches the running consumer without restart",
-      "pass": true,
-      "note": "revision=2, latency=15.1ms"
+      "journey": "01-live-rollout",
+      "step": "the application reports a connected source",
+      "status": "PASS",
+      "note": "HTTP snapshot and SSE stream are live"
     },
     {
-      "journey": "live-rollout",
-      "step": "Live delivery completes in under one second",
-      "pass": true,
-      "note": "15.1ms"
+      "journey": "01-live-rollout",
+      "step": "the running consumer advances to revision 2 without a restart",
+      "status": "PASS",
+      "note": "revision 2 arrived over the live source"
     },
     {
-      "journey": "negative-access",
-      "step": "A runtime read key cannot modify flags",
-      "pass": true,
-      "note": "HTTP 401"
+      "journey": "01-live-rollout",
+      "step": "the selected account receives the new checkout",
+      "status": "PASS",
+      "note": "variant on"
     },
     {
-      "journey": "kill-switch",
-      "step": "The kill switch overrides the 100 percent rollout",
-      "pass": true,
-      "note": "revision=3, reason=DISABLED"
+      "journey": "01-live-rollout",
+      "step": "the live UI update completes in under one second",
+      "status": "PASS",
+      "note": "9.8ms from click to rendered SDK result"
     },
     {
-      "journey": "kill-switch",
-      "step": "The SDK explains the disabled result",
-      "pass": true,
-      "note": "reason=DISABLED"
+      "journey": "01-live-rollout",
+      "step": "the SDK explains the result as a percentage split",
+      "status": "PASS",
+      "note": "core reason SPLIT"
     },
     {
-      "journey": "source-failure",
-      "step": "The consumer detects that its configuration source is stale",
-      "pass": true,
-      "note": "revision=3"
+      "journey": "01-live-rollout",
+      "step": "the OpenFeature provider returns the same split result",
+      "status": "PASS",
+      "note": "provider reason SPLIT"
     },
     {
-      "journey": "source-failure",
-      "step": "Source failure preserves the last valid disabled value",
-      "pass": true,
-      "note": "The caller default is true, but the last valid false value remains active"
+      "journey": "02-sticky-exclusion",
+      "step": "the early cohort is included at 25 percent",
+      "status": "PASS",
+      "note": "bucket is below 2500"
+    },
+    {
+      "journey": "02-sticky-exclusion",
+      "step": "the holdout account does not receive the unreleased checkout",
+      "status": "PASS",
+      "note": "high bucket remains excluded"
+    },
+    {
+      "journey": "02-sticky-exclusion",
+      "step": "the holdout stays on the established checkout",
+      "status": "PASS",
+      "note": "variant off"
+    },
+    {
+      "journey": "02a-unselected-cohort",
+      "step": "the unselected cohort remains on the established checkout",
+      "status": "PASS",
+      "note": "bucket is between 2500 and 4999"
+    },
+    {
+      "journey": "02b-sticky-expansion",
+      "step": "the original cohort is already included",
+      "status": "PASS",
+      "note": "25 percent rollout; early account selected"
+    },
+    {
+      "journey": "02b-sticky-expansion",
+      "step": "the next cohort is initially excluded",
+      "status": "PASS",
+      "note": "same account is off at 25 percent"
+    },
+    {
+      "journey": "02b-sticky-expansion",
+      "step": "the expansion cohort joins at 50 percent",
+      "status": "PASS",
+      "note": "the same identity now falls inside the enlarged boundary"
+    },
+    {
+      "journey": "02b-sticky-expansion",
+      "step": "the original cohort remains included after the ramp grows",
+      "status": "PASS",
+      "note": "no previously selected account moved backward"
+    },
+    {
+      "journey": "03-kill-switch",
+      "step": "the feature is visible during a 100 percent rollout",
+      "status": "PASS",
+      "note": "revision 2 serves on"
+    },
+    {
+      "journey": "03-kill-switch",
+      "step": "the new checkout disappears immediately",
+      "status": "PASS",
+      "note": "kill switch overrides the rollout"
+    },
+    {
+      "journey": "03-kill-switch",
+      "step": "the safe checkout replaces it",
+      "status": "PASS",
+      "note": "off variation is active"
+    },
+    {
+      "journey": "03-kill-switch",
+      "step": "the SDK reports the disabled reason at revision 3",
+      "status": "PASS",
+      "note": "reason DISABLED; revision 3"
+    },
+    {
+      "journey": "03-kill-switch",
+      "step": "OpenFeature also reports the disabled result",
+      "status": "PASS",
+      "note": "provider parity"
+    },
+    {
+      "journey": "04-persistence",
+      "step": "revision 2 serves the selected cohort before restart",
+      "status": "PASS",
+      "note": "50 percent rollout stored on disk"
+    },
+    {
+      "journey": "04-persistence",
+      "step": "the restarted control plane loads the same revision 2",
+      "status": "PASS",
+      "note": "file-backed store retained the complete snapshot"
+    },
+    {
+      "journey": "04-persistence",
+      "step": "the account keeps the same assigned experience after restart",
+      "status": "PASS",
+      "note": "stable identity and salt preserve assignment"
+    },
+    {
+      "journey": "04-persistence",
+      "step": "the runtime reconnects to a healthy live source",
+      "status": "PASS",
+      "note": "source connected"
+    },
+    {
+      "journey": "05-outage-recovery",
+      "step": "the runtime explicitly reports stale configuration",
+      "status": "PASS",
+      "note": "staleAfterMs elapsed with source offline"
+    },
+    {
+      "journey": "05-outage-recovery",
+      "step": "the last valid new checkout remains active during the outage",
+      "status": "PASS",
+      "note": "caller default is false, proving this is the retained true value"
+    },
+    {
+      "journey": "05-outage-recovery",
+      "step": "the active revision remains 2 instead of resetting",
+      "status": "PASS",
+      "note": "last-known-good revision retained"
+    },
+    {
+      "journey": "05-outage-recovery",
+      "step": "OpenFeature exposes the stale state",
+      "status": "PASS",
+      "note": "provider reason STALE"
+    },
+    {
+      "journey": "05-outage-recovery",
+      "step": "the runtime returns to a healthy connected state",
+      "status": "PASS",
+      "note": "source recovered"
+    },
+    {
+      "journey": "05-outage-recovery",
+      "step": "recovery keeps revision 2 and the same feature value",
+      "status": "PASS",
+      "note": "no configuration regression"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "a runtime read key cannot mutate configuration",
+      "status": "PASS",
+      "note": "separate admin credential enforced"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "the rejected credential leaves revision 1 untouched",
+      "status": "PASS",
+      "note": "no write occurred"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "the malformed ruleset is rejected",
+      "status": "PASS",
+      "note": "semantic ruleset validation failed"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "the invalid snapshot never replaces revision 1",
+      "status": "PASS",
+      "note": "last valid snapshot remains active"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "exactly one concurrent writer succeeds and one conflicts",
+      "status": "PASS",
+      "note": "optimistic concurrency enforced"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "the race produces one monotonic revision instead of a lost update",
+      "status": "PASS",
+      "note": "revision advanced exactly once"
+    },
+    {
+      "journey": "06-safety-boundaries",
+      "step": "the consumer remains usable after all rejected operations",
+      "status": "PASS",
+      "note": "valid off value still evaluates"
     }
   ]
 }
