@@ -522,7 +522,9 @@ const PROMISES = {
   "01-live-rollout":
     "A running application receives a percentage rollout live, without restarting or evaluating over the network.",
   "02-sticky-exclusion":
-    "A percentage rollout excludes both the holdout and not-yet-selected cohorts.",
+    "A percentage rollout includes an early cohort while a holdout remains excluded.",
+  "02a-unselected-cohort":
+    "An account outside the percentage boundary remains on the established experience.",
   "02b-sticky-expansion":
     "Expanding a rollout admits the next cohort without removing the original cohort.",
   "03-kill-switch": "The kill switch overrides even a 100% rollout immediately.",
@@ -639,21 +641,30 @@ J("02-sticky-exclusion", async () => {
   );
   await shot(a.page, j, 2, "holdout-excluded");
 
+  await closeSession(a, j);
+});
+
+J("02a-unselected-cohort", async () => {
+  const j = "02a-unselected-cohort";
+  const a = await freshSession(j, "unselected cohort reviewer");
+  const staged = await a.ctx.request.post(`${BASE}/api/rollout`, { data: { percentage: 25 } });
+  if (!staged.ok()) throw new Error(`initial rollout failed with HTTP ${staged.status()}`);
+  await navTo(a.page, j, `${BASE}/`, "the reviewer opens an existing 25 percent rollout");
   await tap(
     a.page,
     j,
     'button:has-text("Jordan · expansion cohort")',
-    "the reviewer checks the next cohort before expanding"
+    "the reviewer checks an account outside the boundary"
   );
   await waitForText(a.page, ".account.active", "Jordan · expansion cohort");
   await a.page.locator('[data-testid="classic-checkout"]').waitFor();
   rec(
     j,
-    "the expansion cohort is still excluded at 25 percent",
+    "the unselected cohort remains on the established checkout",
     await visible(a.page, '[data-testid="classic-checkout"]'),
     "bucket is between 2500 and 4999"
   );
-  await shot(a.page, j, 3, "expansion-cohort-still-excluded");
+  await shot(a.page, j, 1, "unselected-cohort-excluded");
   await closeSession(a, j);
 });
 
