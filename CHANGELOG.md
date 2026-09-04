@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — unreleased
+## 0.1.0 — 2026-09-04
 
 - Added the zero-dependency ruleset validator and deterministic local evaluation engine.
 - Added typed boolean, string, number and JSON variants; exact targets; ordered rules;
