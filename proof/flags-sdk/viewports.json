@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-09-04T03:45:33.417Z",
+  "results": [
+    {
+      "viewport": "320x568",
+      "visible": true,
+      "inViewport": true,
+      "noHorizontalScroll": true,
+      "controlWorks": true,
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "visible": true,
+      "inViewport": true,
+      "noHorizontalScroll": true,
+      "controlWorks": true,
+      "pass": true
+    },
+    {
+      "viewport": "430x932",
+      "visible": true,
+      "inViewport": true,
+      "noHorizontalScroll": true,
+      "controlWorks": true,
+      "pass": true
+    },
+    {
+      "viewport": "768x1024",
+      "visible": true,
+      "inViewport": true,
+      "noHorizontalScroll": true,
+      "controlWorks": true,
+      "pass": true
+    },
+    {
+      "viewport": "1280x800",
+      "visible": true,
+      "inViewport": true,
+      "noHorizontalScroll": true,
+      "controlWorks": true,
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

@@ -1,0 +1,68 @@
+{
+  "title": "CoDuck Flags SDK consumer proof",
+  "startedAt": "2026-09-04T03:40:44.790Z",
+  "finishedAt": "2026-09-04T03:40:45.257Z",
+  "scope": "Built SDK packages against the real embedded reference server over HTTP and SSE",
+  "limitations": [
+    "This is a headless library; there is no browser UI or screenshot claim.",
+    "This does not claim a CoDuck production integration, PR-environment application journey, npm publication, or multi-node control-plane availability."
+  ],
+  "passed": 9,
+  "failed": 0,
+  "results": [
+    {
+      "journey": "initial-state",
+      "step": "The consumer loads the current production-style snapshot",
+      "pass": true,
+      "note": "revision=1"
+    },
+    {
+      "journey": "initial-state",
+      "step": "The feature is initially unavailable",
+      "pass": true,
+      "note": "defaultVariation=off"
+    },
+    {
+      "journey": "live-rollout",
+      "step": "A management SDK change reaches the running consumer without restart",
+      "pass": true,
+      "note": "revision=2, latency=19.4ms"
+    },
+    {
+      "journey": "live-rollout",
+      "step": "Live delivery completes in under one second",
+      "pass": true,
+      "note": "19.4ms"
+    },
+    {
+      "journey": "negative-access",
+      "step": "A runtime read key cannot modify flags",
+      "pass": true,
+      "note": "HTTP 401"
+    },
+    {
+      "journey": "kill-switch",
+      "step": "The kill switch overrides the 100 percent rollout",
+      "pass": true,
+      "note": "revision=3, reason=DISABLED"
+    },
+    {
+      "journey": "kill-switch",
+      "step": "The SDK explains the disabled result",
+      "pass": true,
+      "note": "reason=DISABLED"
+    },
+    {
+      "journey": "source-failure",
+      "step": "The consumer detects that its configuration source is stale",
+      "pass": true,
+      "note": "revision=3"
+    },
+    {
+      "journey": "source-failure",
+      "step": "Source failure preserves the last valid disabled value",
+      "pass": true,
+      "note": "The caller default is true, but the last valid false value remains active"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@coduckai/flags-test-vectors",
+  "version": "0.1.0",
+  "description": "Language-neutral compatibility vectors for CoDuck Flags bucketing",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoDuckAI/flags.git",
+    "directory": "packages/test-vectors"
+  },
+  "homepage": "https://github.com/CoDuckAI/flags#readme",
+  "bugs": {
+    "url": "https://github.com/CoDuckAI/flags/issues"
+  },
+  "type": "module",
+  "files": [
+    "vectors.json",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./vectors.json",
+    "./vectors.json": "./vectors.json"
+  },
+  "scripts": {
+    "publint": "publint"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

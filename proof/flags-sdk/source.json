@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-09-04T03:45:24.644Z",
+  "marker": "coduck-flags-browser-proof-v1",
+  "cwd": "/Users/liam/Desktop/CoDuck/flags",
+  "sha": "9115c009e93647dde8c99863c8238d1c98eb1296",
+  "pid": 35864,
+  "codeDirty": false,
+  "worktreeDirty": true,
+  "processCwdVerified": true,
+  "scope": "Local real SDK consumer over authenticated HTTP/SSE with disk persistence; not a deployed CoDuck integration."
+}

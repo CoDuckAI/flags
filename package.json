@@ -1,0 +1,48 @@
+{
+  "name": "coduck-flags-monorepo",
+  "private": true,
+  "description": "Headless, deterministic feature rollout SDK for TypeScript applications",
+  "license": "MIT",
+  "repository": "github:CoDuckAI/flags",
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "pnpm -r --if-present build",
+    "benchmark": "pnpm build && node benchmarks/evaluate.mjs",
+    "proof": "pnpm build && node proof/flags-sdk/protocol.mjs",
+    "proof:browser": "pnpm build && node proof/flags-sdk/orchestrate.mjs",
+    "package:smoke": "pnpm build && node scripts/package-smoke.mjs",
+    "docs:check": "node scripts/verify-docs.mjs",
+    "example:local": "pnpm build && node examples/quickstart.mjs",
+    "example:live": "pnpm build && node examples/live-rollout.mjs",
+    "release:pack": "pnpm build && node scripts/release-pack.mjs",
+    "release:test": "node --test scripts/release-policy.test.mjs",
+    "format": "prettier --write package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' 'examples/**/*.mjs' 'docs/**/*.md' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md RELEASING.md",
+    "format:check": "prettier --check package.json pnpm-workspace.yaml 'tsconfig*.json' vitest.config.ts 'packages/**/*.{ts,json,md}' 'tests/**/*.ts' 'scripts/**/*.mjs' 'benchmarks/**/*.mjs' 'proof/**/*.mjs' 'examples/**/*.mjs' 'docs/**/*.md' '.github/**/*.yml' README.md SPEC.md SECURITY.md CONTRIBUTING.md CHANGELOG.md RELEASING.md",
+    "typecheck": "pnpm build && pnpm -r --if-present typecheck && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check": "pnpm format:check && pnpm typecheck && pnpm test:coverage && pnpm build && pnpm publint && pnpm package:smoke && pnpm docs:check && pnpm release:test",
+    "publint": "pnpm -r --if-present publint"
+  },
+  "devDependencies": {
+    "@coduckai/flags": "workspace:*",
+    "@coduckai/flags-management": "workspace:*",
+    "@coduckai/flags-server": "workspace:*",
+    "@openfeature/server-sdk": "^1.23.0",
+    "@types/node": "^24.13.3",
+    "@vitest/coverage-v8": "^5.0.0",
+    "ajv": "^8.20.0",
+    "fast-check": "^4.9.0",
+    "playwright": "^1.62.1",
+    "prettier": "^3.9.6",
+    "publint": "^0.3.24",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.0"
+  }
+}

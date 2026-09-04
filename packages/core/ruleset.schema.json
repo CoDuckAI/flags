@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flags.coduck.dev/schema/ruleset-v1.json",
+  "title": "CoDuck Flags ruleset",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "revision", "environment", "updatedAt", "segments", "flags"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "revision": { "type": "integer", "minimum": 1 },
+    "environment": { "$ref": "#/$defs/name" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "segments": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/name" },
+      "additionalProperties": { "$ref": "#/$defs/segment" }
+    },
+    "flags": {
+      "type": "object",
+      "propertyNames": { "$ref": "#/$defs/name" },
+      "additionalProperties": { "$ref": "#/$defs/flag" }
+    }
+  },
+  "$defs": {
+    "name": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._/-]{0,127}$",
+      "not": { "enum": ["__proto__", "prototype", "constructor"] }
+    },
+    "json": {
+      "anyOf": [
+        { "type": "null" },
+        { "type": "boolean" },
+        { "type": "number" },
+        { "type": "string" },
+        { "type": "array", "items": { "$ref": "#/$defs/json" } },
+        {
+          "type": "object",
+          "propertyNames": { "not": { "enum": ["__proto__", "prototype", "constructor"] } },
+          "additionalProperties": { "$ref": "#/$defs/json" }
+        }
+      ]
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attribute", "op"],
+      "properties": {
+        "attribute": {
+          "type": "string",
+          "minLength": 1,
+          "not": { "enum": ["__proto__", "prototype", "constructor"] }
+        },
+        "op": {
+          "enum": [
+            "eq",
+            "neq",
+            "in",
+            "notIn",
+            "contains",
+            "notContains",
+            "startsWith",
+            "endsWith",
+            "gt",
+            "gte",
+            "lt",
+            "lte",
+            "exists",
+            "notExists"
+          ]
+        },
+        "value": { "$ref": "#/$defs/json" }
+      }
+    },
+    "segment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conditions"],
+      "properties": {
+        "conditions": { "type": "array", "items": { "$ref": "#/$defs/condition" } }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["variation", "keys"],
+      "properties": {
+        "variation": { "$ref": "#/$defs/name" },
+        "keys": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "split": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["variation", "weight"],
+      "properties": {
+        "variation": { "$ref": "#/$defs/name" },
+        "weight": { "type": "integer", "minimum": 1, "maximum": 10000 }
+      }
+    },
+    "rollout": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bucketBy", "salt", "splits"],
+      "properties": {
+        "bucketBy": {
+          "type": "string",
+          "minLength": 1,
+          "not": { "enum": ["__proto__", "prototype", "constructor"] }
+        },
+        "salt": { "type": "string", "minLength": 1 },
+        "splits": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/split" } }
+      }
+    },
+    "serve": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["variation"],
+          "properties": { "variation": { "$ref": "#/$defs/name" } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rollout"],
+          "properties": { "rollout": { "$ref": "#/$defs/rollout" } }
+        }
+      ]
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "conditions", "serve"],
+      "properties": {
+        "id": { "$ref": "#/$defs/name" },
+        "conditions": { "type": "array", "items": { "$ref": "#/$defs/condition" } },
+        "serve": { "$ref": "#/$defs/serve" }
+      }
+    },
+    "flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "enabled",
+        "variations",
+        "offVariation",
+        "defaultVariation",
+        "targets",
+        "rules"
+      ],
+      "properties": {
+        "type": { "enum": ["boolean", "string", "number", "json"] },
+        "enabled": { "type": "boolean" },
+        "variations": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": { "$ref": "#/$defs/name" },
+          "additionalProperties": { "$ref": "#/$defs/json" }
+        },
+        "offVariation": { "$ref": "#/$defs/name" },
+        "defaultVariation": { "$ref": "#/$defs/name" },
+        "targets": { "type": "array", "items": { "$ref": "#/$defs/target" } },
+        "rules": { "type": "array", "items": { "$ref": "#/$defs/rule" } },
+        "metadata": { "type": "object", "additionalProperties": { "$ref": "#/$defs/json" } }
+      }
+    }
+  }
+}

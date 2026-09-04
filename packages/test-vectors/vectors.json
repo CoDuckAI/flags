@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "hash": {
+    "algorithm": "FNV-1a-32",
+    "encoding": "UTF-8",
+    "vectors": [
+      { "input": "", "output": 2166136261 },
+      { "input": "hello", "output": 1335831723 },
+      { "input": "🦆", "output": 169018636 },
+      { "input": "账户-42", "output": 322155789 },
+      { "input": "account-123", "output": 3516777165 }
+    ]
+  },
+  "bucket": {
+    "count": 10000,
+    "inputFormat": "<UTF-8 byte length>:<typed targeting value><UTF-8 byte length>:<flag key><UTF-8 byte length>:<salt>",
+    "stringPrefix": "s:",
+    "numberPrefix": "n:",
+    "vectors": [
+      { "targetingValue": "account-123", "flagKey": "new-agent", "salt": "v1", "output": 508 },
+      { "targetingValue": "account-0", "flagKey": "flag", "salt": "salt", "output": 5986 },
+      { "targetingValue": "account-1", "flagKey": "flag", "salt": "salt", "output": 2765 },
+      { "targetingValue": "账户-42", "flagKey": "新功能", "salt": "第一版", "output": 7099 },
+      {
+        "targetingValue": "org_abc",
+        "flagKey": "checkout",
+        "salt": "checkout:public",
+        "output": 677
+      },
+      { "targetingValue": 42, "flagKey": "numeric-flag", "salt": "v1", "output": 4829 },
+      { "targetingValue": -1.5, "flagKey": "numeric-flag", "salt": "v1", "output": 9452 },
+      { "targetingValue": 1e21, "flagKey": "numeric-flag", "salt": "v1", "output": 4576 },
+      { "targetingValue": 1e-7, "flagKey": "numeric-flag", "salt": "v1", "output": 9023 }
+    ]
+  }
+}
