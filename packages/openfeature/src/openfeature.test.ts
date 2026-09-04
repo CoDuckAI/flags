@@ -1,11 +1,15 @@
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { OpenFeature } from "@openfeature/server-sdk";
 import { createClient, staticSource } from "@coduckai/flags";
 import { fixtureRuleset } from "../../../tests/fixtures.js";
 import { createOpenFeatureProvider } from "./index.js";
 
 afterEach(async () => {
-  await OpenFeature.clearProviders();
+  try {
+    await OpenFeature.clearProviders();
+  } finally {
+    vi.useRealTimers();
+  }
 });
 
 describe("OpenFeature provider", () => {
@@ -36,13 +40,18 @@ describe("OpenFeature provider", () => {
   });
 
   it("exposes stale provider state without losing the last value", async () => {
+    vi.useFakeTimers();
     const runtime = createClient({ source: staticSource(fixtureRuleset()), staleAfterMs: 10 });
     const provider = createOpenFeatureProvider(runtime);
     await OpenFeature.setProviderAndWait(provider);
-    await new Promise((resolve) => setTimeout(resolve, 15));
+    await vi.advanceTimersByTimeAsync(9);
+    expect(provider.status).toBe("READY");
+    await vi.advanceTimersByTimeAsync(1);
     expect(provider.status).toBe("STALE");
     const result = await OpenFeature.getClient().getStringDetails("theme", "classic");
     expect(result).toMatchObject({ value: "midnight", reason: "STALE" });
     expect(result.flagMetadata).toMatchObject({ originalReason: "DEFAULT" });
+    await runtime.refresh();
+    expect(provider.status).toBe("READY");
   });
 });
