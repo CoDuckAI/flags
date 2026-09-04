@@ -56,6 +56,12 @@ export interface FileSourceOptions {
 }
 
 export function fileSource(options: FileSourceOptions): FlagSource {
+  const pollIntervalMs = options.pollIntervalMs ?? 5_000;
+  const maxBytes = options.maxBytes ?? 1_048_576;
+  if (options.path.length === 0) throw new TypeError("path must not be empty");
+  for (const [name, value] of Object.entries({ pollIntervalMs, maxBytes })) {
+    if (!Number.isFinite(value) || value <= 0) throw new TypeError(`${name} must be positive`);
+  }
   return {
     kind: "file",
     connect(handlers) {
@@ -68,7 +74,7 @@ export function fileSource(options: FileSourceOptions): FlagSource {
         reading = (async () => {
           try {
             const text = await readFile(options.path, "utf8");
-            if (Buffer.byteLength(text) > (options.maxBytes ?? 1_048_576))
+            if (Buffer.byteLength(text) > maxBytes)
               throw new Error("Ruleset file exceeds maxBytes");
             if (!closed) handlers.onSnapshot(JSON.parse(text) as unknown);
           } catch (error) {
@@ -91,9 +97,6 @@ export function fileSource(options: FileSourceOptions): FlagSource {
           handlers.onError(errorOf(error));
         }
       }
-      const pollIntervalMs = options.pollIntervalMs ?? 5_000;
-      if (!Number.isFinite(pollIntervalMs) || pollIntervalMs <= 0)
-        throw new TypeError("pollIntervalMs must be positive");
       const timer = setInterval(() => void refresh(), pollIntervalMs);
       timer.unref?.();
       return {

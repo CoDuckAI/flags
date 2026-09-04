@@ -153,6 +153,9 @@ export class ManagementClient {
     options: { retries?: number } = {}
   ): Promise<Ruleset> {
     const retries = options.retries ?? 2;
+    if (!Number.isSafeInteger(retries) || retries < 0) {
+      throw new TypeError("retries must be a non-negative safe integer");
+    }
     for (let attempt = 0; attempt <= retries; attempt += 1) {
       const current = await this.getRuleset(environment);
       const next = copy(current);
@@ -185,7 +188,11 @@ export class ManagementClient {
     if (!Number.isFinite(percentage) || percentage < 0 || percentage > 100) {
       throw new TypeError("percentage must be between 0 and 100");
     }
-    const basisPoints = Math.round(percentage * 100);
+    const rawBasisPoints = percentage * 100;
+    const basisPoints = Math.round(rawBasisPoints);
+    if (Math.abs(rawBasisPoints - basisPoints) > 1e-9) {
+      throw new TypeError("percentage supports at most two decimal places");
+    }
     const ruleId = options.ruleId ?? "percentage-rollout";
     return this.update(
       options.environment,
@@ -227,6 +234,7 @@ export class ManagementClient {
     targetingKey: string,
     variation: string
   ): Promise<Ruleset> {
+    if (targetingKey.length === 0) throw new TypeError("targetingKey must not be empty");
     return this.update(environment, (draft) => {
       const flag = draft.flags[flagKey];
       if (!flag) throw new TypeError(`Flag ${flagKey} does not exist`);

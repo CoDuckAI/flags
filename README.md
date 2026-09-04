@@ -183,8 +183,26 @@ Requires Node 20+ and pnpm.
 ```bash
 pnpm install
 pnpm check
+pnpm proof
+pnpm proof:browser
 pnpm benchmark
 ```
+
+`pnpm check` includes types, coverage, package validation, ESM/CommonJS consumer checks,
+one million evaluation ramps, one million bucketing samples, and 24 concurrent writers.
+`pnpm proof` exercises built packages over real HTTP/SSE. `pnpm proof:browser` starts a
+proof-only consumer of the actual SDK (not a shipped dashboard), drives Chrome through
+rollouts, holdouts, kill switches, restart persistence, outages, and rejected writes,
+and records every journey. It also checks five viewport sizes. Set `PROOF_CHROME` to
+your Chrome executable or run `pnpm exec playwright install chromium`; install `ffmpeg`
+to generate cursor-baked MP4s and the GIF in addition to raw recordings.
+
+Open [the interactive proof](./proof/flags-sdk/REPORT.html),
+[its assertion ledger](./proof/flags-sdk/REPORT.md), or
+[the protocol results](./proof/flags-sdk/PROTOCOL.md).
+The exact tested checkout is recorded in `proof/flags-sdk/source.json`.
+This proves a local, real consumer integration—not CoDuck production, a multi-node
+control plane, or a guarantee that every possible failure has been tested.
 
 See [SPEC.md](./SPEC.md) for the stable evaluation and delivery contracts, and
 [SECURITY.md](./SECURITY.md) for the trust boundaries.

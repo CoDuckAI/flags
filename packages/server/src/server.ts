@@ -104,6 +104,23 @@ export class FlagServer {
     ) {
       throw new TypeError("Read and admin keys must be distinct");
     }
+    const maxBodyBytes = options.maxBodyBytes ?? 1_048_576;
+    const heartbeatMs = options.heartbeatMs ?? 15_000;
+    if (!Number.isSafeInteger(maxBodyBytes) || maxBodyBytes <= 0) {
+      throw new TypeError("maxBodyBytes must be a positive safe integer");
+    }
+    if (!Number.isFinite(heartbeatMs) || heartbeatMs <= 0) {
+      throw new TypeError("heartbeatMs must be positive");
+    }
+    if (
+      options.port !== undefined &&
+      (!Number.isSafeInteger(options.port) || options.port < 0 || options.port > 65_535)
+    ) {
+      throw new TypeError("port must be an integer between 0 and 65535");
+    }
+    if (options.host !== undefined && options.host.length === 0) {
+      throw new TypeError("host must not be empty");
+    }
     this.store = options.store ?? new MemoryRulesetStore();
   }
 

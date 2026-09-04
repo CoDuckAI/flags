@@ -28,6 +28,8 @@ const OPERATORS = new Set<ConditionOperator>([
 ]);
 const SAFE_NAME = /^[A-Za-z0-9][A-Za-z0-9._/-]{0,127}$/;
 const FORBIDDEN_KEYS = new Set(["__proto__", "prototype", "constructor"]);
+const RFC3339 =
+  /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(?:Z|[+-](\d{2}):(\d{2}))$/;
 
 export class RulesetValidationError extends Error {
   readonly issues: ValidationIssue[];
@@ -60,6 +62,42 @@ function addUnknownKeyIssues(
 
 function validName(value: unknown): value is string {
   return typeof value === "string" && SAFE_NAME.test(value) && !FORBIDDEN_KEYS.has(value);
+}
+
+function validTimestamp(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  const match = RFC3339.exec(value);
+  if (!match) return false;
+  const [year, month, day, hour, minute, second, offsetHour = 0, offsetMinute = 0] = match
+    .slice(1)
+    .map(Number);
+  if (
+    year === undefined ||
+    month === undefined ||
+    day === undefined ||
+    hour === undefined ||
+    minute === undefined ||
+    second === undefined ||
+    month < 1 ||
+    month > 12 ||
+    day < 1 ||
+    hour > 23 ||
+    minute > 59 ||
+    second > 59 ||
+    offsetHour > 23 ||
+    offsetMinute > 59
+  ) {
+    return false;
+  }
+  const calendar = new Date(0);
+  calendar.setUTCFullYear(year, month - 1, day);
+  calendar.setUTCHours(hour, minute, second, 0);
+  return (
+    calendar.getUTCFullYear() === year &&
+    calendar.getUTCMonth() === month - 1 &&
+    calendar.getUTCDate() === day &&
+    Number.isFinite(Date.parse(value))
+  );
 }
 
 function isJsonValue(value: unknown, depth = 0): value is JsonValue {
@@ -372,12 +410,8 @@ export function validateRuleset(input: unknown): ValidationResult {
     if (!validName(input.environment)) {
       issues.push({ path: "$.environment", message: "Must be a valid environment name" });
     }
-    if (
-      typeof input.updatedAt !== "string" ||
-      !Number.isFinite(Date.parse(input.updatedAt)) ||
-      !input.updatedAt.includes("T")
-    ) {
-      issues.push({ path: "$.updatedAt", message: "Must be an ISO-8601 timestamp" });
+    if (!validTimestamp(input.updatedAt)) {
+      issues.push({ path: "$.updatedAt", message: "Must be a valid RFC 3339 timestamp" });
     }
 
     if (!isRecord(input.segments)) {

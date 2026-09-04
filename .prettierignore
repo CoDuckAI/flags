@@ -5,3 +5,5 @@ pnpm-lock.yaml
 PHASE-0-SPEC.md
 proof/**/REPORT.md
 proof/**/report.json
+proof/**/report.mjs
+proof/**/replay.json
